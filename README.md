@@ -1,3 +1,10 @@
+# ZWA
+## Zásadní požadavky
+- Student musí prokázat, že práci udělal sám!
+- Práce musí fungovat v plném rozsahu. Pokud pokročilý student odevzdává jen některou podčást většího celku, musí toto být jasně řečeno již v zadání práce.
+- Serverová strana aplikace musí být v PHP
+- Kód musí být dokumentován
+
 # Publikační servis "Nezávislé Publikování"
 
 ## Cíl: Umožnit komunitě uživatelů psát vkazy na web.
