@@ -9,17 +9,19 @@
 
 ## Cíl: Umožnit komunitě uživatelů psát vkazy na web.
 
+## Popis:
+- Bude to web, kde může kdokoli publikovat články a mít jistotu, že je žádný správce nezmění.
+- Každý hash publikace obsahuje hash předchozí publikace a vytváří tak řetězec závislostí.
+- Autor, aby se ujistil, že všechny články jsou původní, musí pouze porovnat svůj poslední publikační hash se skutečným publikačním hashem.
+- Všechny publikace a kódy hashe budou přístupné všem. 
 ## Výčet implementovaných stránek
-- 1
-- 2
+- Publikace
+- Moje publikace
+- O servisu
 
 ## Uživatelské role:
-- Nepřihlášení uživatelé.
-- Přihlášení uživatelé:
-  - Běžní přihlášení uživatelé.
-  - Správce fóra (admin)
-
-## Popis:
+- Nepřihlášení uživatelé - čtenář
+- Přihlášení uživatelé - spisovatel
 
 ### Funkce:
 - Vzkaz obsahuje titulek, jméno autora, datum přidání a text.
