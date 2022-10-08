@@ -19,6 +19,15 @@
 - Moje publikace
 - O servisu
 
+- Publikace
+- Pohled na článek
+- Profil spisovatele
+- Moje publikace
+- O servisu
+
+
+
+
 ## Uživatelské role:
 - Nepřihlášení uživatelé - čtenář
 - Přihlášení uživatelé - spisovatel
