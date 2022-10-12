@@ -1,10 +1,21 @@
-import * as expressive from "https://raw.githubusercontent.com/NMathar/deno-express/master/mod.ts";
+const express = require("express");
 
-const port = 8080;
-const app = new expressive.App();
-app.use(expressive.simpleLog());
-app.use(expressive.static_("./public"));
-app.use(expressive.bodyParser.json());
+const app = express();
+const port = 3000;
+
+// const app = new expressive.App();
+
+// app.use(express.simpleLog());
+// app.use(express.static_("./public"));
+// app.use(express.bodyParser.json());
+
+
+
+
+app.get("/", function (req, res) {
+    res.send("Hello World!");
+});
+
 app.get("/api/todos", async (req, res) => {
     await res.json([{ name: "Buy some milk" }]);
 });
@@ -14,5 +25,15 @@ app.get("/api/user/{user_id}", async (req, res) => {
         { id: req.params.user_id, name: "Jim Doe", phone: "12425323" },
     ]);
 });
-const server = await app.listen(port);
-console.log("app listening on port " + server.port);
+
+
+
+
+// const server = await app.listen(port);
+
+
+
+app.listen(port, function () {
+    console.log(`Example app listening on port ${port}!`);
+});
+// console.log("app listening on port " + server.port);
