@@ -19,6 +19,8 @@
 - Moje publikace
 - O servisu
 
+---
+
 - Publikace
 - Pohled na článek
 - Profil spisovatele
