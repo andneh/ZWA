@@ -10,6 +10,8 @@ services:
         # Append -bullseye or -buster to pin to an OS version.
         # Use -bullseye variants on local arm64/Apple Silicon.
         VARIANT: 16-bullseye
+    # ports:
+    #   - "3000:3000"
 
     volumes:
       - .:/workspace:cached
@@ -20,12 +22,15 @@ services:
     command: sleep infinity
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:db # nginx
+    # network_mode: service:db # nginx
     # Uncomment the next line to use a non-root user for all processes.
     # user: node
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
     # (Adding the "ports" property to this file will not forward from a Codespace.)
+    networks:
+      - proxy-network
+      - db-network
 
   db:
     image: postgres:latest
@@ -38,14 +43,19 @@ services:
       POSTGRES_DB: postgres
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
+    networks:
+      - db-network
 
-  nginx:
+  proxy:
     image: nginx
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./client:/usr/share/nginx/html
     ports:
-      - "8080:80"
+      - 80:80
+      - 443:443
+    networks:
+      - proxy-network
 
     # restart: always
     # ports:
@@ -56,3 +66,7 @@ services:
 
 volumes:
   postgres-data:
+
+networks:
+  proxy-network:
+  db-network:
