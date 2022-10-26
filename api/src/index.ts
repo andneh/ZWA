@@ -1,7 +1,6 @@
 const express = require("express");
 import { json } from 'stream/consumers';
 import * as db from './modules/db';
-import { flat } from './types/flat';
 
 const app = express();
 const port = 3000;
