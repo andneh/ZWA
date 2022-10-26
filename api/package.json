@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --project ./",
-    "setup": "node ./dist/dump_install.js",
+    "setup": "node ./dist/flats_to_db.js",
     "start": "node ./dist/index.js"
   },
   "keywords": [],
@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "pg": "^8.8.0"
+    "pg": "^8.8.0",
+    "sreality-client": "^0.0.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.14",

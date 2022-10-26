@@ -1,3 +1,4 @@
+const sr = require("sreality-client");
 import * as db from './modules/db';
 import { flat } from './types/flat';
 
