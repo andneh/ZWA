@@ -6,18 +6,27 @@ import { flat } from './types/flat';
 const app = express();
 const port = 3000;
 
-function delay(d: number) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(1);
-        }, d);
-    });
-}
+const api = [
+    {
+        name: "Andrii",
+        data: "21.22.1222",
+        title: "New Iphone",
+        text: 'hello, today i saw a new iphone',
+        prev_hash: "12312"
+    },
+    {
+        name: "Andrii",
+        data: "21.22.1222",
+        title: "New Iphone",
+        text: 'hello, today i saw a new iphone',
+        prev_hash: "12312"
+    }
+]
 
 app.get("/api/", async (req: any, res: any) => {
     const data = await db.run_async_query("select * from flat_table limit 500;", "Getting items");
     res.json(
-        data.map((flat: any) => ({ title: flat.title, images: [flat.image1, flat.image2, flat.image3] }))
+        api
     );
 });
 app.listen(port, () => {

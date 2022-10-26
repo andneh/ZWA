@@ -20,7 +20,7 @@ services:
       - ./client:/home/node/client
     env_file:
       - .env
-    command: bash -c "npm install;"
+    # command: bash -c "npm install;"
     depends_on:
       - db
     networks:
@@ -31,7 +31,7 @@ services:
     image: nginx
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./client/build:/usr/share/nginx/html
+      - ./client:/usr/share/nginx/html
     ports:
       - 8080:80
     networks:
