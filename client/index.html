@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./public/css/dev.css">
 
     <script src="./public/scripts/js/index.js" defer></script>
-    <script src="./public/scripts/js/loginer.js" defer></script>
-    <script src="./public/scripts/js/articles_manager.js" defer></script>
+    <script src="./public/scripts/js/articles.js" type="module" defer></script>
+    <!-- <script src="./public/scripts/js/loginer.js" defer></script> -->
 
 </head>
 
@@ -24,9 +24,9 @@
         <h1>Nezávislé Publikování</h1>
     </header>
     <nav>
-        <button>Publikace</button>
-        <button>Moje publikace</button>
-        <button>O servisu</button>
+        <button onclick="show_articles()">Publikace</button>
+        <button onclick="show_about()">Moje publikace</button>
+        <button onclick="show_about()">O servisu</button>
     </nav>
     <main>
     </main>

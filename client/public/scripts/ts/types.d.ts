@@ -1,6 +1,14 @@
-interface article {
+// interface article {
+//     name: string;
+//     data: string;
+//     title: string;
+//     text: string;
+//     prev_hash: string;
+// };
+
+type api_data = {
     name: string;
-    data: string;
+    date: string;
     title: string;
     text: string;
     prev_hash: string;
@@ -11,4 +19,4 @@ interface login {
     password: string;
 };
 
-export default { article, login }
+export { api_data, login }

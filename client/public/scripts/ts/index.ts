@@ -1,7 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const articles_1 = require("./articles");
-const api = [
+import { api_data } from "./types";
+import { create_articles } from "./articles";
+
+const api: api_data[] = [
     {
         name: "Andrii",
         date: "21.22.1222",
@@ -17,18 +17,24 @@ const api = [
         prev_hash: "12312"
     }
 ];
+
 const main = document.querySelector('main');
-const articles = (0, articles_1.create_articles)(api);
+const articles = create_articles(api);
+
 console.log("123");
+
 const show_articles = () => {
     if (main != null) {
         main.innerHTML = "";
         main.appendChild(articles);
     }
-};
+}
 const show_about = () => {
     if (main != null) {
         main.innerHTML = "";
     }
     console.log("123");
-};
+}
+
+
+
