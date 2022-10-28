@@ -1,34 +1,37 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const articles_1 = require("./articles");
-const api = [
-    {
-        name: "Andrii",
-        date: "21.22.1222",
-        title: "New Iphone",
-        text: 'hello, today i saw a new iphone',
-        prev_hash: "12312"
-    },
-    {
-        name: "Andrii",
-        date: "21.22.1222",
-        title: "New Iphone",
-        text: 'hello, today i saw a new iphone',
-        prev_hash: "12312"
-    }
-];
+import articles_page from "./components/articles.js";
+import profile_page from "./components/profile.js";
+import about_page from "./components/about.js";
+
+import { articles_data } from "./modules/articles_api.js";
+
 const main = document.querySelector('main');
-const articles = (0, articles_1.create_articles)(api);
-console.log("123");
+import * as nav from "./components/nav.js";
+
+const articles = articles_page(articles_data);
+const profile = profile_page(articles_data);
+const about = about_page(articles_data);
+
 const show_articles = () => {
     if (main != null) {
         main.innerHTML = "";
         main.appendChild(articles);
     }
-};
+}
+const show_profile = () => {
+    if (main != null) {
+        main.innerHTML = "";
+        main.appendChild(profile);
+    }
+}
 const show_about = () => {
     if (main != null) {
         main.innerHTML = "";
+        main.appendChild(about);
     }
-    console.log("123");
-};
+}
+
+nav.article.onclick = show_articles;
+nav.profile.onclick = show_profile;
+nav.about.onclick = show_about;
+
+show_articles();

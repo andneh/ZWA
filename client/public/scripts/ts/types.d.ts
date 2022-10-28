@@ -7,11 +7,12 @@
 // };
 
 type api_data = {
-    name: string;
+    author: string;
     date: string;
     title: string;
     text: string;
-    prev_hash: string;
+    prew_hash: char[5];
+    this_hash: char[5];
 };
 
 interface login {

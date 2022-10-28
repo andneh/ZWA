@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/dev.css">
 
-    <script src="./public/scripts/js/index.js" defer></script>
-    <script src="./public/scripts/js/articles.js" type="module" defer></script>
+    <!-- <script src="./public/scripts/js/articles.js" type="module"></script> -->
+    <script src="./public/scripts/js/index.js" defer type="module"></script>
     <!-- <script src="./public/scripts/js/loginer.js" defer></script> -->
 
 </head>
@@ -24,11 +24,14 @@
         <h1>Nezávislé Publikování</h1>
     </header>
     <nav>
-        <button onclick="show_articles()">Publikace</button>
-        <button onclick="show_about()">Moje publikace</button>
-        <button onclick="show_about()">O servisu</button>
+        <button class="articles">Publikace</button>
+        <button class="profile">Moje publikace</button>
+        <button class="about">O servisu</button>
     </nav>
     <main>
+        <noscript>
+            Please, turn on Javacript.
+        </noscript>
     </main>
     <footer>
         <ul>
