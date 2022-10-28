@@ -1,32 +1,33 @@
 const express = require("express");
 import { json } from 'stream/consumers';
 import * as db from './modules/db';
-import { flat } from './types/flat';
 
 const app = express();
 const port = 3000;
 
-const api = [
+const articles_data = [
     {
-        name: "Andrii",
-        data: "21.22.1222",
+        author: "Andrii",
+        date: Date(),
         title: "New Iphone",
         text: 'hello, today i saw a new iphone',
-        prev_hash: "12312"
+        prew_hash: "12345",
+        this_hash: "54321",
     },
     {
-        name: "Andrii",
-        data: "21.22.1222",
+        author: "Andrii",
+        date: Date(),
         title: "New Iphone",
         text: 'hello, today i saw a new iphone',
-        prev_hash: "12312"
+        prew_hash: "12312",
+        this_hash: "54321",
     }
-]
+];
 
 app.get("/api/", async (req: any, res: any) => {
     const data = await db.run_async_query("select * from flat_table limit 500;", "Getting items");
     res.json(
-        api
+        articles_data
     );
 });
 app.listen(port, () => {

@@ -1,5 +1,4 @@
 import * as db from './modules/db';
-import { flat } from './types/flat';
 
 const create_table_query = `
     CREATE TABLE flat_table (

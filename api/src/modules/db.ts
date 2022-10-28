@@ -1,8 +1,7 @@
-import { Connection } from "../types/connection";
-
+import { db_connection } from "../types";
 const pg = require("pg");
 
-const connection: Connection = {
+const connection: db_connection = {
     host: 'db',
     port: 5432,
     user: String(process.env.POSTGRES_USER),

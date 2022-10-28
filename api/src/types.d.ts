@@ -1,10 +1,10 @@
-// interface article {
-//     name: string;
-//     data: string;
-//     title: string;
-//     text: string;
-//     prev_hash: string;
-// };
+export interface db_connection {
+    host: string;
+    port: number;
+    user: string;
+    password: string;
+    database: string;
+}
 
 type article_data = {
     author: string;
@@ -20,4 +20,4 @@ interface login {
     password: string;
 };
 
-export { api_data, login }
+export { db_connection, api_data, login }
