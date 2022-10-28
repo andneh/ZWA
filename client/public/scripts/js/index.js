@@ -12,24 +12,29 @@ const profile = profile_page(articles_data);
 const about = about_page(articles_data);
 
 
-
+dom.main.appendChild(articles);
+dom.main.appendChild(profile);
+dom.main.appendChild(about);
 
 const show_articles = () => {
     if (dom.main != null) {
-        dom.main.innerHTML = "";
-        dom.main.appendChild(articles);
+        articles.style.display = "block";
+        about.style.display = "none";
+        profile.style.display = "none"
     }
 }
 const show_profile = () => {
     if (dom.main != null) {
-        dom.main.innerHTML = "";
-        dom.main.appendChild(profile);
+        articles.style.display = "none";
+        about.style.display = "block";
+        profile.style.display = "none"
     }
 }
 const show_about = () => {
     if (dom.main != null) {
-        dom.main.innerHTML = "";
-        dom.main.appendChild(about);
+        articles.style.display = "none";
+        about.style.display = "none";
+        profile.style.display = "block"
     }
 }
 
