@@ -1,3 +1,25 @@
+header {
+    border: red 5px solid;
+}
+
+nav {
+    border: orange 5px solid;
+}
+
+.nav {
+    display: flexbox;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    border: yellow 5px solid;
+}
+
+footer {
+    block-size: 20vw;
+}
+
 * {
     border: 1px solid black;
 }
