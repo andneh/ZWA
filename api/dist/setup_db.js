@@ -22,33 +22,53 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const db = __importStar(require("./modules/db"));
+const basic_data_1 = __importDefault(require("./modules/basic_data"));
+const table_name = "articles";
+const data_parameters = [
+    "author",
+    "date",
+    "title",
+    "text",
+    "prev_hash",
+    "this_hash",
+];
 const create_table_query = `
-    CREATE TABLE flat_table (
-        title varchar, 
-        image1 varchar, 
-        image2 varchar, 
-        image3 varchar 
+    CREATE TABLE articles (
+        ${data_parameters[0]} varchar,
+        ${data_parameters[1]} varchar,
+        ${data_parameters[2]} varchar,
+        ${data_parameters[3]} varchar,
+        ${data_parameters[4]} varchar,
+        ${data_parameters[5]} varchar
     );`;
-let insert_items_query = `INSERT INTO flat_table (title, image1, image2, image3) VALUES \n`;
-db.run_async_query(create_table_query, "Creating Table");
-/*.finally(() => {
-sr.fetchHouses(1, 500, 'municipality', 3468).then((data: flat[]) => {
-let i = 1;
-data.forEach((flat: flat) => {
-insert_items_query += `('${flat.description}',
-'${flat.images[0] ? flat.images[0] : ''}',
-'${flat.images[1] ? flat.images[1] : ''}',
-'${flat.images[2] ? flat.images[2] : ''}')${(data.length != i) ? ',' : ';'} \n`;
-i += 1
+let insert_items_query = `INSERT INTO ${table_name} (
+    ${data_parameters[0]},
+    ${data_parameters[1]},
+    ${data_parameters[2]}, 
+    ${data_parameters[3]},
+    ${data_parameters[4]}, 
+    ${data_parameters[5]}
+    ) VALUES \n`;
+db.run_async_query(create_table_query, "Creating Table").finally(() => {
+    let i = 1;
+    basic_data_1.default.forEach((data) => {
+        insert_items_query += `(
+            '${data.author}', 
+            '${data.date}', 
+            '${data.title}', 
+            '${data.text}', 
+            '${data.prev_hash}', 
+            '${data.this_hash}'
+            )${(basic_data_1.default.length != i) ? ',' : ';'} \n`;
+        i += 1;
+    });
+    db.run_async_query(insert_items_query, "Inserting items").finally(() => {
+        db.run_async_query(`SELECT * FROM ${table_name};`, "Selecting").then((res) => { console.log(res); });
+        // db.drop_flats()
+    });
 });
-
-db.run_async_query(insert_items_query, "Inserting items")
-// .finally(() => {
-//  db.run_async_query("SELECT * FROM flat_table;", "Selecting").then((res: any) => { console.log(res) })
-db.drop_flats()
-// });
-});
-});
-*/ 

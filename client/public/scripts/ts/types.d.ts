@@ -11,7 +11,7 @@ type article_data = {
     date: string;
     title: string;
     text: string;
-    prew_hash: char[5];
+    prev_hash: char[5];
     this_hash: char[5];
 };
 
