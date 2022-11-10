@@ -1,4 +1,5 @@
-const articles_page = (api) => {
+import * as dom from "../dom"
+const set_articles = (api) => {
     const conteiner = document.createElement('div');
     conteiner.className = "conteiner articles";
 
@@ -19,4 +20,4 @@ const articles_page = (api) => {
     return conteiner;
 };
 
-export default articles_page;
+export default set_articles;

@@ -1,12 +1,22 @@
-const main = document.querySelector('main');
+import page from "./components/page";
 
-const article = document.querySelector('button.articles');
-const profile = document.querySelector('button.profile');
-const about = document.querySelector('button.about');
+
+const main = {
+    articles: new page('main>div.articles'),
+    profile: new page('main>div.articles'),
+    about: new page('main>div.articles'),
+}
+
+const nav = {
+    article: document.querySelector('button.articles'),
+    profile: document.querySelector('button.profile'),
+    about: document.querySelector('button.about'),
+}
 
 export {
     main,
-    article,
-    profile,
-    about,
+    nav,
 };
+
+
+const a = document.querySelectorAll("main div");
