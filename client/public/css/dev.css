@@ -1,20 +1,45 @@
-
-div.page {
-    background-color: #e7c900;
-}
-div.page>form,div.page>ul{
-    background-color: #f90000;
+:root {
+    --background: #494949;
+    --pages: #c5c5c5;
+    --content: #ffffff;
 }
 
-body * {
-    background-color: #ff5c00;
+body{
+    background-color: var(--background);   
+}
+body *{
     border: 1px solid black;
-    margin: 20px;
+    background-color: #var(--background);
     color: white;
     text-shadow: black 0px 0px 4px ;
 }
+body>* * {
+    margin: 10px;
+}
 
-body>*{
-    background-color: #668960;
-    margin: 0px;
+header{
+    display: flex;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+}
+nav>* {
+    margin-inline: auto;
+}
+
+main{
+
+}
+
+div.page {
+    background-color: #acacac;
+}
+div.page>form,div.page>ul{
+    background-color: #e7e7e7;
+}
+
+footer{
+    
 }

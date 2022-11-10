@@ -12,7 +12,7 @@ class page {
     }
 
     show() {
-        document.querySelectorAll("main>div").forEach(e => e.style.display = "none");
+        document.querySelectorAll("main>div.page").forEach(e => e.style.display = "none");
         this.div.style.display = "block";
     }
 
@@ -27,15 +27,19 @@ class nav {
 
 
 
-const main = {
-    articles: new page('main>div.articles'),
-    profile: new page('main>div.profile'),
-    about: new page('main>div.about'),
+const pages = {
+    articles: new page('div.page.articles'),
+    login: new page('div.page.login'),
+    registr: new page('div.page.registr'),
+    profile: new page('div.page.profile'),
+    about: new page('div.page.articles'),
 };
 const navig = {
-    articles: new nav('nav>button.articles', main.articles),
-    profile: new nav('nav>button.profile', main.profile),
-    about: new nav('nav>button.about', main.about),
+    articles: new nav('nav>button.articles', pages.articles),
+    login: new nav("nav>button.log", pages.login),
+    registr: new nav("nav>button.reg", pages.register),
+    profile: new nav('nav>button.profile', pages.profile),
+    about: new nav('nav>button.about', pages.about),
 };
 
-main.profile.show();
+pages.profile.show();
