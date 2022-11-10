@@ -1,27 +1,20 @@
-header {
-    border: red 5px solid;
+
+div.page {
+    background-color: #e7c900;
+}
+div.page>form,div.page>ul{
+    background-color: #f90000;
 }
 
-nav {
-    border: orange 5px solid;
-}
-
-.nav {
-    display: flexbox;
-    list-style: none;
-    text-decoration: none;
-}
-
-main {
-    border: yellow 5px solid;
-}
-
-footer {
-    border: blue 5px solid;
-    block-size: 20vw;
-}
-
-main * {
+body * {
+    background-color: #ff5c00;
     border: 1px solid black;
     margin: 20px;
+    color: white;
+    text-shadow: black 0px 0px 4px ;
+}
+
+body>*{
+    background-color: #668960;
+    margin: 0px;
 }

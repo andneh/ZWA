@@ -2,13 +2,14 @@
 - [Obsah](#obsah)
 - [Zásadní požadavky](#zásadní-požadavky)
 - [O projectu](#o-projectu)
-    - [Nazev](#nazev)
-    - [Cíl](#cíl)
-    - [Popis](#popis)
-    - [Výčet implementovaných stránek](#výčet-implementovaných-stránek)
-    - [Uživatelské role](#uživatelské-role)
-    - [Funkce](#funkce)
-    - [DOM](#dom)
+  - [Nazev](#nazev)
+  - [Cíl](#cíl)
+  - [Popis:](#popis)
+  - [Výčet implementovaných stránek](#výčet-implementovaných-stránek)
+  - [Uživatelské role:](#uživatelské-role)
+    - [Funkce:](#funkce)
+    - [Funkce podle rolí:](#funkce-podle-rolí)
+  - [DOM](#dom)
 
 # Zásadní požadavky
 - Student musí prokázat, že práci udělal sám!
@@ -61,5 +62,11 @@
 <details><summary>Schéma</summary>
 
 ![DOM Schéma](./docs/dom.dio.svg)
+
+</details>
+
+<details><summary>Struktura webu</summary>
+
+![Struktura webu](./docs/dom.png)
 
 </details>
