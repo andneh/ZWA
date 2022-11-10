@@ -17,9 +17,11 @@ main {
 }
 
 footer {
+    border: blue 5px solid;
     block-size: 20vw;
 }
 
-* {
+main * {
     border: 1px solid black;
+    margin: 20px;
 }
