@@ -1,0 +1,5 @@
+header {
+    background-color: var(--black);
+    display: flex;
+    text-align: center;
+}

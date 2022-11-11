@@ -3,14 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nezávislé Publikování</title>
-    <link rel="shortcut icon" href="./public/images/NP_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/images/logo_white.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./public/css/normalize.css">
-    <link rel="stylesheet" href="./public/css/index.css">
-    <link rel="stylesheet" href="./public/css/dev.css">
+
+    <link rel="stylesheet" href="./public/css/root.css">
+    <link rel="stylesheet" href="./public/css/headeder.css">
+    <link rel="stylesheet" href="./public/css/nav.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
 
     <!-- <script src="./public/scripts/js/components/page.js" async type="module"></script> -->
 
@@ -23,26 +28,25 @@
 </head>
 
 <body class="root">
+
+
     <header>
-        <img src="./public/images/NP_logo.png" alt="NP_logo" width="100">
+        <img src="./public/images/logo_white.png" alt="NP_logo" width="100" height="100">
         <h1>Nezávislé Publikování</h1>
+        <nav>
+            <button class="nav articles">Publikace</button>
+            <button class="nav login">log</button>
+            <button class="nav profile">Moje publikace</button>
+            <button class="nav about">O servisu</button>
+        </nav>
     </header>
-    <nav>
-        <button class="articles">Publikace</button>
-        <button class="log">log</button>
-        <button class="reg"> reg</button>
-        <button class="profile">Moje publikace</button>
-        <button class="about">O servisu</button>
-    </nav>
+
     <main>
         <noscript>
             <p>
-                Please, turn on Javacript.
+                Please, turn on JavaScript.
             </p>
         </noscript>
-
-
-
 
 
         <div class="page articles">
@@ -56,24 +60,24 @@
         </div>
 
         <div class="page unauthorized login">
-            login page
             <form class="login" action="" method="post">
                 login form
                 <input class="login login" placeholder="login" type="text">
                 <input class="login passwod" placeholder="password" type="password">
                 <button class="login" type="submit">login</button>
-                <button class="registr" type="button">register</button>
             </form>
+            <button class="nav registr"> registr</button>
+
         </div>
 
         <div class="page unauthorized registr">
-            registr page
             <form class="register" action="" method="post">
                 register form
                 <input class="register login" placeholder="login" type="text">
                 <input class="register passwod" placeholder="password" type="password">
                 <button class="register" type="submit">register</button>
             </form>
+
         </div>
 
         <div class="page profile">
@@ -101,6 +105,7 @@
         </div>
 
     </main>
+
     <footer>
         <ul>
             <li>&COPY; Andrii Nehalchuk 2022</li>

@@ -21,7 +21,12 @@ class page {
 class nav {
     constructor(selector, page) {
         this.button = document.querySelector(selector);
-        this.button.addEventListener('click', () => { page.show(); });
+        this.button.addEventListener('click', () => {
+            page.show();
+            document.querySelectorAll("nav button").forEach(e => e.style.background = "var(--black)");
+            this.button.style.background = "var(--background)";
+            this.button.style.borderRadius = "10px 10px -10px -10px"
+        });
     }
 }
 
@@ -35,11 +40,11 @@ const pages = {
     about: new page('div.page.articles'),
 };
 const navig = {
-    articles: new nav('nav>button.articles', pages.articles),
-    login: new nav("nav>button.log", pages.login),
-    registr: new nav("nav>button.reg", pages.register),
-    profile: new nav('nav>button.profile', pages.profile),
-    about: new nav('nav>button.about', pages.about),
+    articles: new nav('.nav.articles', pages.articles),
+    login: new nav(".nav.login", pages.login),
+    registr: new nav(".nav.registr", pages.registr),
+    profile: new nav('.nav.profile', pages.profile),
+    about: new nav('.nav.about', pages.about),
 };
 
-pages.profile.show();
+navig.articles.button.click()

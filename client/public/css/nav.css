@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    background-color: var(--black);
+
+}
+
+nav button {
+    background-color: var(--black);
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid black;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+
+nav * {
+    background-color: var(--black);
+    margin-inline: auto;
+}
