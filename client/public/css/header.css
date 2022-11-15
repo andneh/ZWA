@@ -1,5 +1,30 @@
 header {
+    block-size: 10%;
+    inline-size: 100%;
+
+    margin: 0px;
+    padding: 0px;
+
+    border: none;
+
     background-color: var(--black);
+
     display: flex;
-    text-align: center;
+    /* text-align: center; */
+}
+
+header * {
+    margin: 1rem;
+}
+
+header > img {
+    block-size: 100px;
+    inline-size: 100px;
+
+    margin: auto;
+    padding: 0px;
+
+    border: none;
+
+    background-color: var(--black);
 }

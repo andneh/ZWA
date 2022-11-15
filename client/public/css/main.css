@@ -1,12 +1,23 @@
 main {
-    border-radius: 10px 10px 10px 10px;
-}
-div.page {
-    inline-size: 80%;
-    background-color: var(--background);
+    block-size: 100%;
+    inline-size: 100%;
+
+    margin: 0px;
+    padding: 0px;
+    border: none;
+
+    background-color: var(--black);
 }
 
-div.page>form,
-div.page>ul {
+main div.page {
+    block-size: 200px;
+    /* inline-size: initial; */
+
+    margin: 1rem;
+    padding: 0px;
+
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+
     background-color: var(--background);
 }

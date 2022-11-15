@@ -1,24 +1,31 @@
 nav {
-    display: flex;
-    background-color: var(--black);
+    block-size: initial;
+    inline-size: 100%;
 
+    margin: 0px;
+    padding: 0px;
+
+    border: none;
+
+    background-color: var(--black);
+    display: flex;
 }
 
-nav button {
+nav button.nav {
+    block-size: 3rem;
+    inline-size: 20%;
+
+    margin: auto;
+    padding: 0px;
+
+    border: 1px black solid;
+
+    text-align: center;
+
+    block-size: 2rem;
+    color: var(--text);
+
     background-color: var(--black);
     border-radius: 10px 10px 10px 10px;
     border: 1px solid black;
-
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--black);
-}
-
-nav * {
-    background-color: var(--black);
-    margin-inline: auto;
 }
