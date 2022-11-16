@@ -11,19 +11,21 @@
 
     <link rel="stylesheet" href="./public/css/normalize.css">
 
+
+    <link rel="stylesheet" class="theme" href="./public/css/theme/light.css">
     <link rel="stylesheet" href="./public/css/root.css">
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/nav.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/footer.css">
 
-    <!-- <script src="./public/scripts/js/components/page.js" async type="module"></script> -->
+    <!-- <script src="./public/js/modules/nav.js" type="module"></script>
+    <script src="./public/js/modules/page.js" type="module"></script>
+    <script src="./public/js/modules/theme.js" type="module"></script>
+    <script src="./public/js/modules/article.js" type="module"></script>
+    <script src="./public/js/modules/accaunt.js" type="module"></script> -->
 
-    <!-- <script src="./public/scripts/js/modules/articles_api.js" async type="module"></script>
-    <script src="./public/scripts/js/modules/login_api.js" async type="module"></script> -->
-
-    <!-- <script src="./public/scripts/js/dom.js" defer type="module"></script> -->
-    <script src="./index.js" defer></script>
+    <script src="./public/js/index.js" defer></script>
 
 </head>
 
@@ -31,13 +33,14 @@
 
 
     <header>
-        <img src="./public/images/logo_white.png" alt="NP_logo" width="100" height="100">
+        <img class="theme" src="./public/images/logo/dark.png" alt="NP_logo" width="100" height="100">
         <!-- <h1>Nezávislé Publikování</h1> -->
         <nav>
             <button class="nav articles">Publikace</button>
             <button class="nav login">log</button>
             <button class="nav profile">Moje publikace</button>
             <button class="nav about">O servisu</button>
+            <button class="nav theme"> Theme</button>
         </nav>
     </header>
 
@@ -104,6 +107,7 @@
         <ul>
             <li>&COPY; Andrii Nehalchuk 2022</li>
             <li><a href="https://github.com/nehalch/CTU_FEL_ZWA">O projectu</a></li>
+            <li><a href="#">GitHub</a></li>
         </ul>
     </footer>
 </body>

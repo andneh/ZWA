@@ -11,7 +11,27 @@ footer {
     padding: 0px;
 
     border-top: solid 1px black;
+    border: none;
     border-radius: 10px 10px 10px 10px;
 
     background: var(--black);
+}
+
+footer ul {
+    /* height: 40px; */
+    /* inline-size: 100%; */
+    /* margin-top: 0px; */
+    /* padding: 0px; */
+
+    /* border-top: solid 1px black; */
+    border: none;
+
+    /* border-radius: 10px 10px 10px 10px; */
+
+    background: var(--black);
+}
+
+footer ul * {
+    border: none;
+    background-color: var(--black);
 }
