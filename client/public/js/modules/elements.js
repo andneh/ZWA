@@ -65,12 +65,13 @@ class articlesWrapper {
         const article = document.createElement("article");
         article.innerHTML = `
             <h2><u>${data.title}</u></h2>
+            <p>${data.text}</p>
             <div class="info">
                 <h3>${data.firstName + " " + data.lastName}</h3>
                 <h3>${data.date}</h3>
                 <h3>${data.hash}</h3>
             </div>
-            <p>${data.text}</p>
+            <hr>
         `;
         return article
     }

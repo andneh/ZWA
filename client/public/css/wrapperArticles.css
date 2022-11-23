@@ -1,5 +1,5 @@
 .wrapper.articles {
-    block-size: 100%;
+    /* block-size: 100%; */
     inline-size: 100%;
 
     margin: 0px;
@@ -8,8 +8,20 @@
 }
 article > .info {
     display: flex;
+    border: none;
 }
+
+article * {
+    border: none;
+}
+
 article > .info > h3 {
-    margin-left: auto;
-    margin-right: auto;
+    margin-block: 0px;
+    margin-inline: auto;
+
+    border: none;
+}
+
+hr {
+    border: 1px black;
 }
