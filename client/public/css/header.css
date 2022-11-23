@@ -1,16 +1,6 @@
 header {
-    block-size: 10%;
-    inline-size: 100%;
-
-    margin: 0px;
-    padding: 0px;
-
-    border: none;
-
-    background-color: var(--black);
-
     display: flex;
-    /* text-align: center; */
+    border-block-end: var(--text) 1px solid;
 }
 
 header * {
@@ -26,5 +16,5 @@ header > img {
 
     border: none;
 
-    background-color: var(--black);
+    background-color: var(--background);
 }

@@ -1,24 +1,14 @@
 nav {
-    block-size: initial;
     inline-size: 100%;
-
-    margin: 0px;
-    padding: 0px;
-
-    border: none;
-
-    background-color: var(--black);
     display: flex;
+    margin: 0px;
 }
 
 nav button.nav {
-    block-size: 3rem;
-    inline-size: 15%;
-
+    align-content: center;
+    width: 100%;
     margin: auto;
     padding: 0px;
-
-    border: 1px black solid;
 
     text-align: center;
 
@@ -26,10 +16,13 @@ nav button.nav {
     color: var(--text);
 
     background-color: var(--black);
-    border-radius: 10px 10px 10px 10px;
-    border: 1px solid black;
+    /* border-radius: 10px 10px 10px 10px; */
 }
 
-nav button.nav :hover {
-    background-color: #777777;
+button.nav svg {
+    margin: auto;
+}
+
+path {
+    fill: var(--text);
 }

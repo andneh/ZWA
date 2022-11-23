@@ -18,10 +18,9 @@ const wrappers = {
 
 const navig = {
     articles: new nav('.nav.articles', () => { pages.articles.show(); wrappers.articles.load(); }),
-    login: new nav(".nav.login", () => { pages.login.show() }),
     registr: new nav(".nav.registr", () => { pages.registr.show() }),
     profile: new nav('.nav.profile', () => { pages.profile.show(); wrappers.profile.load(); }),
-    about: new nav('.nav.about', () => { pages.about.show() }),
+    about: new nav('.nav.about', () => { pages.about.show() }), // pages.login.show()
     theme: new nav(".nav.theme", () => { toggleTheme() }, false),
 };
 
