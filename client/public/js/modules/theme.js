@@ -3,7 +3,6 @@ const theme = {
     light: "light",
     dark: "dark",
     set: function (theme) {
-        console.log(theme);
         localStorage.setItem(this.item, theme);
 
         document.querySelector("link.theme").href = "./public/css/theme/" + theme + ".css";

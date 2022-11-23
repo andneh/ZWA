@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/nav.css">
     <link rel="stylesheet" href="./public/css/main.css">
-    <link rel="stylesheet" href="./public/css/footer.css">
+    <!-- <link rel="stylesheet" href="./public/css/footer.css"> -->
+    <link rel="stylesheet" href="./public/css/wrapperArticles.css">
 
     <!-- <script src="./public/js/modules/nav.js" type="module"></script>
     <script src="./public/js/modules/page.js" type="module"></script>
@@ -25,7 +26,7 @@
     <script src="./public/js/modules/article.js" type="module"></script>
     <script src="./public/js/modules/accaunt.js" type="module"></script> -->
 
-    <script src="./public/js/index.js" defer></script>
+    <script src="./public/js/index.js" type="module" defer></script>
 
 </head>
 
@@ -52,15 +53,11 @@
         </noscript>
 
 
-        <div class="page articles">
-            <ul class="wrapper articles">
-                <li>
-                    articles
-                </li>
-            </ul>
+        <div style="display: none" class="page articles">
+            <div class="wrapper articles"></div>
         </div>
 
-        <div class="page unauthorized login">
+        <div style="display: none" class="page unauthorized login">
             <form class="login" action="#" method="post">
                 <input class="login login" placeholder="login" type="text">
                 <input class="login passwod" placeholder="password" type="password">
@@ -70,7 +67,7 @@
 
         </div>
 
-        <div class="page unauthorized registr">
+        <div style="display: none" class="page unauthorized registr">
             <form class="register" action="#" method="post">
                 <input class="register login" placeholder="login" type="text">
                 <input class="register passwod" placeholder="password" type="password">
@@ -79,7 +76,7 @@
 
         </div>
 
-        <div class="page profile">
+        <div style="display: none" class="page profile">
             <div class="profile info">
                 <p>
                     profile info
@@ -90,14 +87,10 @@
                 <input class="write" placeholder="New article" type="text">
                 <button class="write" type="submit">publish</button>
             </form>
-            <ul class="wrapper articles colection">
-                <li>
-                    articles
-                </li>
-            </ul>
+            <div class="wrapper articles colection"></div>
         </div>
 
-        <div class="page about">
+        <div style="display: none" class="page about">
             <p>about</p>
         </div>
 
