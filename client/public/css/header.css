@@ -1,5 +1,6 @@
 header {
     display: flex;
+    align-content: center;
     border-block-end: var(--text) 1px solid;
 }
 
@@ -11,10 +12,10 @@ header > img {
     block-size: 100px;
     inline-size: 100px;
 
-    margin: auto;
-    padding: 0px;
+    margin-inline-end: auto;
 
     border: none;
-
-    background-color: var(--background);
+}
+header > h1 {
+    inline-size: 60%;
 }
