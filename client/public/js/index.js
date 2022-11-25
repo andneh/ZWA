@@ -1,5 +1,5 @@
 import { page, articlesWrapper, nav } from "./modules/elements.js";
-import { toggleTheme, loadTheme } from "./modules/theme.js";
+import { toggleTheme, loadTheme } from "./modules/themeManager.js";
 
 loadTheme();
 
