@@ -40,4 +40,4 @@ const loadTheme = () => {
     }
 }
 
-export { toggleTheme, loadTheme };
+// export { loadTheme, toggleTheme }
