@@ -3,11 +3,7 @@ class articleCard {
         this.data = data
         this.article = document.createElement("article");
 
-        this.openButton = document.createElement("button")
-        // this.openButton.textContent = "123"
-        this.openButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M10 38V26h3v9h9v3Zm25-16v-9h-9v-3h12v12Z"/></svg>';
-        this.openButton.className = "nav"
-        this.openButton.addEventListener("click", () => { openCard(data); })
+        this.openButton = createBtn('<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M10 38V26h3v9h9v3Zm25-16v-9h-9v-3h12v12Z"/></svg>', "nav", )
 
         this.article.innerHTML = `
         <div class="info">
@@ -26,6 +22,24 @@ class articleCard {
 
 }
 const openCard = (data) => {
+    const pop = document.querySelector(".openCard")
+    const closeBtn = document.createElement("button")
+
+
+    pop.innerHTML = ""
+
     console.log(data.title);
     const div = document.createElement("div")
+}
+
+
+
+
+const createBtn = (svg, className, handler) => {
+    btn = document.createElement("button")
+    // this.openButton.textContent = "123"
+    btn.innerHTML = svg;
+    btn.className = className;
+    btn.addEventListener("click", handler())
+    return btn;
 }
