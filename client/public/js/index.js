@@ -18,3 +18,4 @@ const pages = {
 
 
 document.querySelector(".nav.articles").click();
+

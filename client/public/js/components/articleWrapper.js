@@ -7,7 +7,7 @@ const articlesWrapper = (api, selector) => {
 const fetch = (url) => {
     return [
         {
-            title: "Title",
+            title: "Titlelore",
             firstName: "Andrii",
             lastName: "Nehalchuk",
             date: "12.12.1212",

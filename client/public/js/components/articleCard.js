@@ -26,5 +26,6 @@ class articleCard {
 
 }
 const openCard = (data) => {
-    console.log(data.text);
+    console.log(data.title);
+    const div = document.createElement("div")
 }
