@@ -1,3 +1,3 @@
 const page = (selector) => {
-    this.element = document.querySelector(selector);
+    return document.querySelector(selector);
 }
