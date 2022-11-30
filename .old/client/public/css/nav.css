@@ -1,0 +1,32 @@
+nav {
+    min-inline-size: 250px;
+    inline-size: 50%;
+    max-inline-size: 500px;
+    display: flex;
+    margin: 0px;
+}
+
+button.nav {
+    align-content: center;
+    height: 100%;
+    margin: auto;
+    padding: 0px;
+
+    text-align: center;
+    border: none;
+    block-size: 2rem;
+    color: var(--text);
+    object-fit: scale-down;
+    background-color: var(--black);
+    /* border-radius: 10px 10px 10px 10px; */
+}
+
+button.nav svg {
+    margin: auto;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+path {
+    fill: var(--text);
+}

@@ -1,0 +1,9 @@
+main {
+}
+
+main div.page {
+    margin-inline: auto;
+    min-inline-size: 300px;
+    inline-size: 90%;
+    max-inline-size: 800px;
+}

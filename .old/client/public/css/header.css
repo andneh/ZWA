@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    align-content: center;
+    border-block-end: var(--text) 1px solid;
+}
+
+header * {
+    margin: 1rem;
+}
+
+header > img {
+    block-size: 100px;
+    inline-size: 100px;
+
+    margin-inline-end: auto;
+
+    border: none;
+}
+header > h1 {
+    inline-size: 60%;
+}
