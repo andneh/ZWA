@@ -6,7 +6,6 @@
     ?>
 
 <body class="root">
-
     <?php 
     include "includes/_header.php";
     ?>

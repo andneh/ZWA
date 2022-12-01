@@ -4,9 +4,8 @@ const theme = {
     dark: "dark",
     set: function (theme) {
         localStorage.setItem(this.item, theme);
-
-        document.querySelector("link.theme").href = "./public/css/theme/" + theme + ".css";
-        document.querySelector("img.theme").src = "./public/images/logo/" + theme + ".png";
+        document.querySelector("link.theme").href = "./static/css/theme/" + theme + ".css";
+        document.querySelector("img.theme").src = "./static/images/logo/" + theme + ".png";
 
     },
 }
@@ -40,4 +39,4 @@ const loadTheme = () => {
     }
 }
 
-// export { loadTheme, toggleTheme }
+loadTheme();
