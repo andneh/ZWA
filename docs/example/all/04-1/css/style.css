@@ -1,0 +1,41 @@
+/* reset */
+*                   { margin: 0; padding: 0; }
+h1, h2, h3, h4      { font-size: 12px;}
+
+body {
+    color: #484848;
+    background-color: #ffe4c4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* main layout */
+/* header */
+header h1                   { font-size: 200%; color: teal; font-weight: bold; }
+header img                  { width: 50px;}
+
+/* footer */
+footer .box ul a:link,
+ footer .box ul a:visited,
+ footer .box ul a:active     { color: crimson; }
+footer .box ul a:hover       { color: yellowgreen; }
+
+.group                       { border: 5px dotted red; margin: 10px;}
+
+/* END main layout */
+
+/* detail */
+#detail header h1                        { font-size: 800%; }
+
+#detail #content nav                      { }
+
+#detail #content article h2               { font-size: 150%; color: royalblue; }
+#detail #content article p::first-letter  { background-color: tomato; font-size: 300%; font-style: italic; }
+
+/* homepage */
+
+
+/* login */
+
+
+/* vypis */

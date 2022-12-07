@@ -1,0 +1,52 @@
+/* toto je komentar */
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    color: #000;
+    background-color: #fff2d9;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic; /* normal */
+    font-weight: bold; /* normal */
+}
+
+/* csska pro obecny layout */
+.group      { 
+    margin: 10px;
+    border: 2px solid #a0a0a0;
+    border-bottom: 4px solid #ec0000;
+    border-style: dashed;
+    border-top-color: black;
+}
+
+
+/* csska pro homepage */
+
+/* header*/
+#homepage header h1         { font-size: 200%; color: darkred;}
+#homepage header img        { width: 50px; }
+
+/* article */
+
+#homepage #content article p::first-letter  { font-size: 300%; background-color: violet; }
+
+
+/* footer */
+#homepage footer div.box ul li a:link, 
+ #homepage footer div.box ul li a:visited,
+ #homepage footer div.box ul li a:active     { color:greenyellow; font-weight: bold;}
+
+#homepage footer div.box ul li a:hover       { color: #ec0000; }
+
+
+/* csska pro detail */
+
+
+
+
+
+/* csska pro vypis */

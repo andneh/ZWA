@@ -1,0 +1,48 @@
+/* reset */
+*                     { padding: 0; margin: 0; }
+h1, h2, h3, h4        { font-size: 12px; font-weight: normal; }
+
+/* main layout */
+body {
+    color: #484848;
+    background-color: #ffe4c4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.group {
+    margin: 10px;          
+    border: 6px dashed #ce7714;  
+    border-top: 10px solid red;
+    background-color: rosybrown;
+}
+
+/* header */
+header h1                     { font-size:200%; color: tomato; font-weight: bold; }
+header img                    { width: 50px; }
+
+/* footer */
+footer .box ul a:link,        
+ footer .box ul a:visited,
+ footer .box ul a:active      { color: violet; font-weight: bolder; }
+footer .box ul a:hover        { color: slateblue; }
+footer .box#other ul a:hover  { color: yellowgreen; }
+
+/* END main layout */
+
+
+
+/* detail */
+/* header */
+#detail header h1               { font-size: 20%; }
+
+/* clanek */
+#detail #content article p::first-letter    { font-size: 300%; background-color: seagreen; }
+
+
+/* homepage */
+
+
+/* login */
+
+
+/* vypis */

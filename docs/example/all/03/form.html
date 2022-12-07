@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+</head>
+<body>
+    <form action="https://wa.toad.cz/~xklima/vypisform.php" method="post" > <!--enctype="multipart/form-data"-->
+        <fieldset>
+            <legend>Obecne info</legend>
+
+            <div class="row">
+                <label for="name">Jmeno</label>
+                <input type="text" name="name" id="name" disabled value="koko">   
+            </div>
+
+            <div class="row">
+                <label for="surname">Prijmeni</label>
+                <input type="text" name="surname" required pattern="007" placeholder="sem neco napis" autocomplete="off" id="surname">   
+            </div>
+
+            <div class="row">
+                <label for="sex1">Pohlavi:</label>
+                <br>
+                <input value="o" type="radio" name="sex" id="sex1"> <label for="sex1">O </label>
+                <br>
+                <input value="m" type="radio" name="sex" id="sex2"> <label for="sex2">M </label>
+                <br>
+                <input value="f" type="radio" name="sex" id="sex3"> <label for="sex3">F </label>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Zajmy</legend>
+            <div class="row">
+                <label for="col1">Oblibene barvy:</label>
+                <br>
+                <input value="r" type="checkbox" name="color[]" id="col1"> <label for="col1">Red </label>
+                <br>
+                <input value="g" type="checkbox" name="color[]" id="col2"> <label for="col2">Green </label>
+                <br>
+                <input value="b" type="checkbox" name="color[]" id="col3"> <label for="col3">Blue </label>
+
+            </div>
+
+
+            <div class="row">
+                <label for="sport">Sport</label>
+                <select multiple size="2" name="sport[]" id="sport">
+                    <option value="01">Hokej</option>
+                    <option value="02">Box</option>
+                    <option value="03">Judo</option>
+                </select>
+            </div>
+
+            <div>
+<textarea cols="80" rows="20" name="poznamka">
+jewhgfewife
+
+
+ewlfjwekfjwef
+
+
+
+
+dsfsdifjdsf
+
+
+dsfkdsfl
+</textarea>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Odeslat formular">
+    </form>
+</body>
+</html>
