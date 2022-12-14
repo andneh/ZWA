@@ -22,8 +22,9 @@ require("./lib/_articles.php");
         foreach($articles as $article){
             echo "
             <article>
-            <h2>$article['title']</h2>
-            <p>$article['text']</p>
+                <h2>{$article["title"]}</h2>
+                <h3>{$article["uid"]}</h3>
+                <p>{$article["text"]}</p>
             </article>
             ";
         }
