@@ -1,9 +1,13 @@
+<?php
+require "./lib/_users.php";
+
+if(isset($_POST["register"])){
+echo "$_POST";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="cs">
-
-<?php 
-    include "includes/_head.php";
-    ?>
 
 <body class="root">
 
@@ -19,7 +23,7 @@
         </noscript>
 
         <div  class="page unauthorized registr">
-            <form class="register" action="#" method="post">
+            <form class="register" action="register" method="post">
                 <input class="register login" placeholder="login" type="text">
                 <input class="register passwod" placeholder="password" type="password">
                 <button class="register" type="submit">register</button>

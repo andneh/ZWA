@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?php 
-    include "includes/_head.php";
-    ?>
 
 <body class="root">
     <?php 
@@ -29,8 +26,6 @@
             <button class="nav registr"> registr</button>
 
         </div>
-
-        
 
     </main>
 

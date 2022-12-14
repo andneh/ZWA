@@ -1,14 +1,16 @@
 [
     {
-        "login": "123",
-        "pass": "123",
-        "first_name": "123",
-        "last_name": "123"
+        "id": 1,
+        "login": "root",
+        "password_hash": "foobar",
+        "first_name": "Foo",
+        "last_name": "Bar"
     },
     {
-        "login": "123",
-        "pass": "123",
-        "first_name": "123",
-        "last_name": "123"
+        "id": 2,
+        "login": "andrew",
+        "password_hash": "hash",
+        "first_name": "Andrew",
+        "last_name": "Neh"
     }
 ]

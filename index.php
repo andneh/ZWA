@@ -1,6 +1,10 @@
+<?php
+require("./lib/_articles.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="cs">
-
 <?php 
     include "includes/_head.php";
     ?>
@@ -12,22 +16,18 @@
     ?>
 
     <main>
-        <noscript>
-            <h1>
-                Please, turn on JavaScript.
-            </h1>
-        </noscript>
 
-
-        <div  class="page articles">
-            <div style="display: none;" class="openCard">
-                <article class="openCard">
-                </article>
-            </div>
-            <div class="wrapper articles">
-                page
-            </div>
-        </div>
+    <?php
+        
+        foreach($articles as $article){
+            echo "
+            <article>
+            <h2>$article['title']</h2>
+            <p>$article['text']</p>
+            </article>
+            ";
+        }
+    ?>
 
     </main>
 
