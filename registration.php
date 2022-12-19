@@ -1,8 +1,8 @@
 <?php
 require "./lib/_users.php";
 
-if(isset($_POST["register"])){
-echo "$_POST";
+if (isset($_POST["register"])) {
+    echo "$_POST";
 }
 ?>
 
@@ -11,8 +11,8 @@ echo "$_POST";
 
 <body class="root">
 
-    <?php 
-    include "includes/_header.php";
+    <?php
+    include "components/_header.php";
     ?>
 
     <main>
@@ -22,7 +22,7 @@ echo "$_POST";
             </p>
         </noscript>
 
-        <div  class="page unauthorized registr">
+        <div class="page unauthorized registr">
             <form class="register" action="register" method="post">
                 <input class="register login" placeholder="login" type="text">
                 <input class="register passwod" placeholder="password" type="password">

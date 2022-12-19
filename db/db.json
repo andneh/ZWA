@@ -1,16 +1,21 @@
-[
-    {
-        "id": 1,
-        "login": "root",
-        "password_hash": "foobar",
-        "first_name": "Foo",
-        "last_name": "Bar"
-    },
-    {
-        "id": 2,
-        "login": "andrew",
-        "password_hash": "hash",
-        "first_name": "Andrew",
-        "last_name": "Neh"
-    }
-]
+{
+    "users": [
+        {
+            "uid": "63a070d055b8e",
+            "login": "root",
+            "fname": "Foo",
+            "lname": "Bar",
+            "passhash": "$2y$10$C8VJRgk.2NbweoVMxQ6DUOZnU2XaYyIbjLZGDruwGXIfQGP6JsATK"
+        }
+    ],
+    "articles": [
+        {
+            "aid": "63a070d0662e1",
+            "uid": 0,
+            "title": "Title",
+            "text": "Text content.",
+            "date": "19th of December 2022",
+            "prevhash": "HASH"
+        }
+    ]
+}

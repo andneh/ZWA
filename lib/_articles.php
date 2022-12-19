@@ -1,26 +1,21 @@
 <?php
-        json_decode(,true);
-    $articles = array(  
-        array(
-                "title" => "title",
-                "uid" => "1",
-                "text" => "text",
-        ),
-        array(
-                "title" => "title",
-                "uid" => "1",
-                "text" => "text",
-        ),
-        array(
-                "title" => "title",
-                "uid" => "1",
-                "text" => "text",
-        ),
-        array(
-                "title" => "title",
-                "uid" => "1",
-                "text" => "text",
-        ),
-        );
-    
+require("db/_db.php");
+
+function addArticle(
+    $title,
+    $text
+)
+{
+    $hash = "hash";
+    $data = loadDB();
+    array_push($data['articles'], article(1, $title, $text, $hash));
+    saveDB($data);
+}
+
+function getArticles()
+{
+    return loadDB()["articles"];
+}
+
+//TODO get articles by uid
 ?>

@@ -4,7 +4,7 @@
 
 <body class="root">
     <?php 
-    include "includes/_header.php";
+    include "components/_header.php";
     ?>
 
     <main>

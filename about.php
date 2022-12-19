@@ -2,13 +2,13 @@
 <html lang="cs">
 
 <?php 
-    include "includes/_head.php";
+    include "components/_head.php";
     ?>
 
 <body class="root">
 
     <?php 
-    include "includes/_header.php";
+    include "components/_header.php";
     ?>
 
     <main>

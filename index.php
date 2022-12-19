@@ -1,25 +1,24 @@
 <?php
-require("./lib/_articles.php");
+require("lib/_articles.php");
 ?>
 
 
 <!DOCTYPE html>
 <html lang="cs">
-<?php 
-    include "includes/_head.php";
-    ?>
+<?php
+include "components/_head.php";
+?>
 
 <body class="root">
 
-    <?php 
-    include "includes/_header.php";
+    <?php
+    include "components/_header.php";
     ?>
 
     <main>
 
-    <?php
-        
-        foreach($articles as $article){
+        <?php
+        foreach (getArticles() as $article) {
             echo "
             <article>
                 <h2>{$article["title"]}</h2>
@@ -28,7 +27,7 @@ require("./lib/_articles.php");
             </article>
             ";
         }
-    ?>
+        ?>
 
     </main>
 

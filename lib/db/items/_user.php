@@ -1,7 +1,6 @@
 <?php
-define("passSUL", "sull");
 
-function createUser(
+function user(
     $login,
     $fname,
     $lname,
@@ -9,10 +8,10 @@ function createUser(
 ) {
     return array(
         "uid" => uniqid(),
-        "login" => $login,
+        "username" => $login,
         "fname" => $fname,
         "lname" => $lname,
-        "passhash" => password_hash($password, passSUL),
+        "passhash" => password_hash("{$password}sull", PASSWORD_DEFAULT)
     );
 }
 
