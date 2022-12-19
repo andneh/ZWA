@@ -1,13 +1,39 @@
 <?php
-require "./lib/_users.php";
+require 'lib/_users.php';
+//TODO testing on password
+// TODO testing login
+// TODO login
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if (isset($_POST["register"])) {
-    echo "$_POST";
+    if ($username && $password) {
+        $user = getUserByUsername($username);
+        if ($user) {
+            if (password_verify($password, $user['passhash'])) {
+                session_start();
+                $_SESSION['uid'] = $user['uid'];
+                header('Location: profile.php');
+            } else {
+                $error = 'Jmeno nebo heslo byly zadny spatne';
+            }
+        } else {
+            $error = 'Jmeno nebo heslo byly zadny spatne';
+        }
+
+    } else {
+        $error = 'Jmeno nebo heslo byly zadny spatne';
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="cs">
+
+<?php
+include "components/_head.php";
+?>
 
 <body class="root">
 
@@ -22,14 +48,30 @@ if (isset($_POST["register"])) {
             </p>
         </noscript>
 
-        <div class="page unauthorized registr">
-            <form class="register" action="register" method="post">
-                <input class="register login" placeholder="login" type="text">
-                <input class="register passwod" placeholder="password" type="password">
-                <button class="register" type="submit">register</button>
-            </form>
+        <form action="" method="post">
+            <div>
+                <label>
+                    Username:
+                    <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Password:
+                    <input type="password" name="password">
+                </label>
+            </div>
 
-        </div>
+            <input type="submit" name="login" value="Registrovat se">
+
+            <?php
+            if (isset($error)) {
+                echo "<p style=\"color:red;\">$error</p>";
+            }
+            ?>
+        </form>
+        <a href="login.php">login</a>
+
 
     </main>
 

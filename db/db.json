@@ -1,16 +1,16 @@
 {
     "users": [
         {
-            "uid": "63a070d055b8e",
-            "login": "root",
+            "uid": "63a076bfed982",
+            "username": "root",
             "fname": "Foo",
             "lname": "Bar",
-            "passhash": "$2y$10$C8VJRgk.2NbweoVMxQ6DUOZnU2XaYyIbjLZGDruwGXIfQGP6JsATK"
+            "passhash": "$2y$10$AVgPypa9xsThYI\/61ipxXuMXWl80jtcBf.AhrszOJ1UfVoM2HG5CK"
         }
     ],
     "articles": [
         {
-            "aid": "63a070d0662e1",
+            "aid": "63a076c00d979",
             "uid": 0,
             "title": "Title",
             "text": "Text content.",

@@ -1,9 +1,40 @@
+<?php
+require 'lib/_users.php';
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username && $password) {
+        $user = getUserByUsername($username);
+        if ($user) {
+            if (password_verify($password, $user['passhash'])) {
+                session_start();
+                $_SESSION['uid'] = $user['uid'];
+                header('Location: profile.php');
+            } else {
+                $error = 'Jmeno nebo heslo byly zadny spatne';
+            }
+        } else {
+            $error = 'Jmeno nebo heslo byly zadny spatne';
+        }
+
+    } else {
+        $error = 'Jmeno nebo heslo byly zadny spatne';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="cs">
 
+<?php
+include "components/_head.php";
+?>
 
 <body class="root">
-    <?php 
+    <?php
     include "components/_header.php";
     ?>
 
@@ -15,17 +46,29 @@
         </noscript>
 
 
-        
+        <form action="" method="post">
+            <div>
+                <label>
+                    Username:
+                    <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Password:
+                    <input type="password" name="password">
+                </label>
+            </div>
 
-        <div  class="page unauthorized login">
-            <form class="login" action="#" method="post">
-                <input class="login login" placeholder="login" type="text">
-                <input class="login passwod" placeholder="password" type="password">
-                <button class="login" type="submit">login</button>
-            </form>
-            <button class="nav registr"> registr</button>
+            <input type="submit" name="login" value="Prihlasit se">
 
-        </div>
+            <?php
+            if (isset($error)) {
+                echo "<p style=\"color:red;\">$error</p>";
+            }
+            ?>
+        </form>
+        <a href="registration.php">Registrace</a>
 
     </main>
 

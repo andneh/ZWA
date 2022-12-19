@@ -11,7 +11,7 @@ function user(
         "username" => $login,
         "fname" => $fname,
         "lname" => $lname,
-        "passhash" => password_hash("{$password}sull", PASSWORD_DEFAULT)
+        "passhash" => password_hash($password, PASSWORD_DEFAULT)
     );
 }
 
