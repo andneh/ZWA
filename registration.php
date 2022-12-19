@@ -10,10 +10,16 @@ if (isset($_POST['registration'])) {
         case $_POST['username']:
             $error = 'Jmeno ne ma byt prazne';
             break;
-
         case !getUserByUsername($_POST['username']):
             $error = 'Zkuste jine jmeno';
             break;
+        case $_POST['fname']:
+            $error = "Jmeno ne ma byt prazne";
+            break;
+        case $_POST['lname']:
+            $error = "Prijmeni ne ma byt prezne";
+            break;
+
 
         case $_POST['password1']:
             $error = "heslo ne ma byt prazne";
@@ -21,12 +27,6 @@ if (isset($_POST['registration'])) {
 
         case $_POST['password1'] == $_POST['password2']:
             $error = "Hesla nejsou stejni";
-            break;
-        case $_POST['fname']:
-            $error = "Jmeno ne ma byt prazne";
-            break;
-        case $_POST['lname']:
-            $error = "Prijmeni ne ma byt prezne";
             break;
         default:
             $error = "success";
