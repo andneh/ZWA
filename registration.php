@@ -84,7 +84,7 @@ include "components/_head.php";
             <div>
                 <label>
                     Příjmení:
-                    <input type="text" value="<?= isset($lname) ? $lname : '' ?>" name="lname">
+                    <input type="text" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
                 </label>
             </div>
             <div>
