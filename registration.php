@@ -2,7 +2,8 @@
 require 'lib/_users.php';
 //TODO testing on password
 // TODO testing login
-// TODO login
+// TODO add user
+// TODO auto login
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];

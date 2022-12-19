@@ -40,11 +40,12 @@ include "components/_head.php";
             </div>
 
             <form class="write" action="#" method="post">
+                <!-- TODO add article -->
                 <input class="write" placeholder="New article" type="text">
                 <button class="write" type="submit">publish</button>
             </form>
             <div class="wrapper articles colection"></div>
-            // TODO get articles by uid and sort
+            <!--  TODO get articles by uid and sort -->
         </div>
 
     </main>
