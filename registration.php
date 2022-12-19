@@ -36,7 +36,7 @@ if (isset($_POST['registration'])) {
             $_POST['lname'],
             $_POST['password1']
         );
-        $user = getUserByUsername($username);
+        $user = getUserByUsername($_POST['username']);
         session_start();
         $_SESSION['uid'] = $user['uid'];
         header('Location: profile.php');
