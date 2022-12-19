@@ -3,14 +3,14 @@ require("db/_db.php");
 
 
 function addUser(
-    $login,
+    $username,
     $fname,
     $lname,
     $password,
 )
 {
     $data = loadDB();
-    array_push($data['users'], user($login,$fname,$lname,$password));
+    array_push($data['users'], user($username,$fname,$lname,$password));
     saveDB($data);
 
 }

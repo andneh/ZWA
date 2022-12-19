@@ -1,14 +1,14 @@
 <?php
 
 function user(
-    $login,
+    $username,
     $fname,
     $lname,
     $password,
 ) {
     return array(
         "uid" => uniqid(),
-        "username" => $login,
+        "username" => $username,
         "fname" => $fname,
         "lname" => $lname,
         "passhash" => password_hash($password, PASSWORD_DEFAULT)

@@ -6,6 +6,13 @@
             "fname": "Foo",
             "lname": "Bar",
             "passhash": "$2y$10$AVgPypa9xsThYI\/61ipxXuMXWl80jtcBf.AhrszOJ1UfVoM2HG5CK"
+        },
+        {
+            "uid": "63a08f94880bb",
+            "username": "andrew",
+            "fname": "Andrii",
+            "lname": "Nehalchuk",
+            "passhash": "$2y$10$4NEJEux8lO3v2r\/nIO5duutQ9699W8Bqu3ux5MMwBo7OntRZ13\/OC"
         }
     ],
     "articles": [

@@ -4,29 +4,47 @@ require 'lib/_users.php';
 // TODO testing login
 // TODO add user
 // TODO auto login
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if (isset($_POST['registration'])) {
 
-    if ($username && $password) {
+    switch (false) {
+        case $_POST['username']:
+            $error = 'Jmeno ne ma byt prazne';
+            break;
+
+        case !getUserByUsername($_POST['username']):
+            $error = 'Zkuste jine jmeno';
+            break;
+
+        case $_POST['password1']:
+            $error = "heslo ne ma byt prazne";
+            break;
+
+        case $_POST['password1'] == $_POST['password2']:
+            $error = "Hesla nejsou stejni";
+            break;
+        case $_POST['fname']:
+            $error = "Jmeno ne ma byt prazne";
+            break;
+        case $_POST['lname']:
+            $error = "Prijmeni ne ma byt prezne";
+            break;
+        default:
+            $error = "success";
+            break;
+    }
+    if (!$error) {
+        addUser(
+            $_POST['username'],
+            $_POST['fname'],
+            $_POST['lname'],
+            $_POST['password1']
+        );
         $user = getUserByUsername($username);
-        if ($user) {
-            if (password_verify($password, $user['passhash'])) {
-                session_start();
-                $_SESSION['uid'] = $user['uid'];
-                header('Location: profile.php');
-            } else {
-                $error = 'Jmeno nebo heslo byly zadny spatne';
-            }
-        } else {
-            $error = 'Jmeno nebo heslo byly zadny spatne';
-        }
-
-    } else {
-        $error = 'Jmeno nebo heslo byly zadny spatne';
+        session_start();
+        $_SESSION['uid'] = $user['uid'];
+        header('Location: profile.php');
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -53,17 +71,36 @@ include "components/_head.php";
             <div>
                 <label>
                     Username:
-                    <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
+                    <input type="text" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>"
+                        name="username">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Jméno:
+                    <input type="text" value="<?= isset($_POST['fname']) ? $_POST['fname'] : '' ?>" name="fname">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Příjmení:
+                    <input type="text" value="<?= isset($lname) ? $lname : '' ?>" name="lname">
                 </label>
             </div>
             <div>
                 <label>
                     Password:
-                    <input type="password" name="password">
+                    <input type="password" name="password1">
+                </label>
+            </div>
+            <div>
+                <label>
+                    opakujte Password:
+                    <input type="password" name="password2">
                 </label>
             </div>
 
-            <input type="submit" name="login" value="Registrovat se">
+            <input type="submit" name="registration" value="Registrovat se">
 
             <?php
             if (isset($error)) {
