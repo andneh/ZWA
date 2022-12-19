@@ -33,9 +33,11 @@ include "components/_head.php";
 
         <div class="page profile">
             <div class="profile info">
-                <p>
-                    profile info
-                </p>
+                <h2>
+                    <?php
+                    echo "{$user['fname']} {$user['lname']}";
+                    ?>
+                </h2>
                 <a href="logout.php">logout</a>
             </div>
 
