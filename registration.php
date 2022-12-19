@@ -28,9 +28,6 @@ if (isset($_POST['registration'])) {
         case $_POST['password1'] == $_POST['password2']:
             $error = "Hesla nejsou stejni";
             break;
-        default:
-            $error = "success";
-            break;
     }
     if (!$error) {
         addUser(
