@@ -1,1 +1,56 @@
-{"users":[{"uid":"63a076bfed982","username":"root","fname":"Foo","lname":"Bar","passhash":"$2y$10$AVgPypa9xsThYI\/61ipxXuMXWl80jtcBf.AhrszOJ1UfVoM2HG5CK"},{"uid":"63a08f94880bb","username":"andrew","fname":"Andrii","lname":"Nehalchuk","passhash":"$2y$10$4NEJEux8lO3v2r\/nIO5duutQ9699W8Bqu3ux5MMwBo7OntRZ13\/OC"},{"uid":"63a095acd1784","username":"root1","fname":"foo","lname":"bar","passhash":"$2y$10$lLS8mWuebyMVcpjmsOorFuRFRjb\/J1gJXG2bXc5pgJPrZcf8hI1f."},{"uid":"63a0982178631","username":"andreww","fname":"Andrii","lname":"Neh","passhash":"$2y$10$pehd9nv7Yvy9P0XWuZRaNuDEB8LBmFwNaeGSBaRlHCLQ2Keia0VVi"}],"articles":[{"aid":"63a076c00d979","uid":0,"title":"Title","text":"Text content.","date":"19th of December 2022","prevhash":"HASH"}]}
+{
+    "users": [
+        {
+            "uid": "63a076bfed982",
+            "username": "root",
+            "fname": "Foo",
+            "lname": "Bar",
+            "passhash": "$2y$10$AVgPypa9xsThYI\/61ipxXuMXWl80jtcBf.AhrszOJ1UfVoM2HG5CK"
+        },
+        {
+            "uid": "63a08f94880bb",
+            "username": "andrew",
+            "fname": "Andrii",
+            "lname": "Nehalchuk",
+            "passhash": "$2y$10$4NEJEux8lO3v2r\/nIO5duutQ9699W8Bqu3ux5MMwBo7OntRZ13\/OC"
+        },
+        {
+            "uid": "63a095acd1784",
+            "username": "root1",
+            "fname": "foo",
+            "lname": "bar",
+            "passhash": "$2y$10$lLS8mWuebyMVcpjmsOorFuRFRjb\/J1gJXG2bXc5pgJPrZcf8hI1f."
+        },
+        {
+            "uid": "63a0982178631",
+            "username": "andreww",
+            "fname": "Andrii",
+            "lname": "Neh",
+            "passhash": "$2y$10$pehd9nv7Yvy9P0XWuZRaNuDEB8LBmFwNaeGSBaRlHCLQ2Keia0VVi"
+        },
+        {
+            "uid": "63a1bcc1ce218",
+            "username": "qwe",
+            "fname": "qwe",
+            "lname": "qwe",
+            "passhash": "$2y$10$9pY2Vd6m\/Im\/Gz2LReek3OxQxIH6XbP6AdNLzIbWmE0mkWeliR10y"
+        },
+        {
+            "uid": "63a1bd3f69b41",
+            "username": "sabka",
+            "fname": "sabkovna",
+            "lname": "sabinkovna",
+            "passhash": "$2y$10$Yyk3jPdLfXgGlM3fnWioTOA\/T0Eh9APGOPC4f8j62GWxAw.6nPdXG"
+        }
+    ],
+    "articles": [
+        {
+            "aid": "63a076c00d979",
+            "uid": 0,
+            "title": "Title",
+            "text": "Text content.",
+            "date": "19th of December 2022",
+            "prevhash": "HASH"
+        }
+    ]
+}
