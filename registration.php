@@ -1,5 +1,6 @@
 <?php
 require 'lib/_users.php';
+require 'lib/'
 //TODO testing on password
 // TODO testing login
 // TODO add user
