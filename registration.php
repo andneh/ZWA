@@ -1,33 +1,22 @@
 <?php
 require 'lib/_users.php';
-require 'lib/'
+require 'lib/_validate.php';
 //TODO testing on password
 // TODO testing login
 // TODO add user
 // TODO auto login
 if (isset($_POST['registration'])) {
-
     switch (false) {
-        case $_POST['username']:
-            $error = 'Jmeno ne ma byt prazne';
-            break;
-        case !getUserByUsername($_POST['username']):
-            $error = 'Zkuste jine jmeno';
-            break;
-        case $_POST['fname']:
-            $error = "Jmeno ne ma byt prazne";
-            break;
-        case $_POST['lname']:
-            $error = "Prijmeni ne ma byt prezne";
+        case validateUserName($_POST['username']):
             break;
 
-
-        case $_POST['password1']:
-            $error = "heslo ne ma byt prazne";
+        case validateFName($_POST['fname']):
             break;
 
-        case $_POST['password1'] == $_POST['password2']:
-            $error = "Hesla nejsou stejni";
+        case validateLName($_POST['lname']):
+            break;
+
+        case validatePassword($_POST['password1'], $_POST['password2']):
             break;
     }
     if (!$error) {
