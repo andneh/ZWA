@@ -1,7 +1,6 @@
 <?php
 require("db/_db.php");
 
-
 function addUser(
     $username,
     $fname,

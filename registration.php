@@ -1,5 +1,4 @@
 <?php
-require 'lib/_users.php';
 require 'lib/_validate.php';
 //TODO testing on password
 // TODO testing login
@@ -7,7 +6,7 @@ require 'lib/_validate.php';
 // TODO auto login
 if (isset($_POST['registration'])) {
     switch (false) {
-        case validateUserName($_POST['username']):
+        case $error = validateUserName($_POST['username']):
             break;
 
         case validateFName($_POST['fname']):
@@ -19,18 +18,19 @@ if (isset($_POST['registration'])) {
         case validatePassword($_POST['password1'], $_POST['password2']):
             break;
     }
-    if (!$error) {
-        addUser(
-            $_POST['username'],
-            $_POST['fname'],
-            $_POST['lname'],
-            $_POST['password1']
-        );
-        $user = getUserByUsername($_POST['username']);
-        session_start();
-        $_SESSION['uid'] = $user['uid'];
-        header('Location: profile.php');
-    }
+    echo $error;
+    // if (!$error) {
+    //     addUser(
+    //         $_POST['username'],
+    //         $_POST['fname'],
+    //         $_POST['lname'],
+    //         $_POST['password1']
+    //     );
+    //     $user = getUserByUsername($_POST['username']);
+    //     session_start();
+    //     $_SESSION['uid'] = $user['uid'];
+    //     header('Location: profile.php');
+    // }
 }
 ?>
 
