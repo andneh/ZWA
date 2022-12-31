@@ -5,8 +5,8 @@ function article(
     $title,
     $text,
     $hash
-)
-{
+) {
+    // TODO ARRAY HASHS
     return array(
         "aid" => uniqid(),
         "uid" => $uid,
@@ -16,5 +16,3 @@ function article(
         "prevhash" => $hash,
     );
 }
-
-?>
