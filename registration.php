@@ -53,6 +53,28 @@ include "components/_head.php";
                 Please, turn on JavaScript.
             </p>
         </noscript>
+        <form>
+            <fieldset>
+                <legend>Fruit juice size</legend>
+                <p>
+                    <label for="name">
+                        Name: <input type="text" id="name" name="user_name" />
+                    </label>
+                    <!-- TODO FORMS -->
+                    <label for="name">Name:</label> <input type="text" id="name" name="user_name" />
+                    <input type="radio" name="size" id="size_1" value="small" />
+                    <label for="size_1">Small</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_2" value="medium" />
+                    <label for="size_2">Medium</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_3" value="large" />
+                    <label for="size_3">Large</label>
+                </p>
+            </fieldset>
+        </form>
 
         <form action="" method="post">
             <div>
@@ -72,6 +94,11 @@ include "components/_head.php";
                 <label>
                     Příjmení:
                     <input type="text" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="date" name="" id="">
                 </label>
             </div>
             <div>

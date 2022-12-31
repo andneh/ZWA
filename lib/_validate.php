@@ -51,7 +51,7 @@ function validateLName($lname)
 
     return true;
 }
-
+// TODO VALIDATE ERRORS
 function validatePassword($password1, $password2)
 {
     switch (false) {
@@ -69,4 +69,3 @@ function validatePassword($password1, $password2)
     }
     return true;
 }
-?>

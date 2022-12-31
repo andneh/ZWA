@@ -13,6 +13,5 @@ function user(
         "lname" => $lname,
         "passhash" => password_hash($password, PASSWORD_DEFAULT)
     );
+    // TODO PASSWORD SALT
 }
-
-?>

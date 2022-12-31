@@ -6,34 +6,33 @@ function addUser(
     $fname,
     $lname,
     $password,
-)
-{
+) {
     $data = loadDB();
-    array_push($data['users'], user($username,$fname,$lname,$password));
+    array_push($data['users'], user($username, $fname, $lname, $password));
     saveDB($data);
-
 }
 
-function getUsers(){
+function getUsers()
+{
     return loadDB()["users"];
 }
 
-function getUserByUsername($username) {
-        foreach(getUsers() as $user) {
-            if ($username == $user['username']) {
-                return $user;
-            }
+function getUserByUsername($username)
+{
+    foreach (getUsers() as $user) {
+        if ($username == $user['username']) {
+            return $user;
         }
-        return NULL;
     }
+    return NULL;
+}
 
-    function getUserByUid($uid) {
-        foreach(getUsers() as $user) {
-            if ($uid == $user['uid']) {
-                return $user;
-            }
+function getUserByUid($uid)
+{
+    foreach (getUsers() as $user) {
+        if ($uid == $user['uid']) {
+            return $user;
         }
-        return NULL;
     }
-
-?>
+    return NULL;
+}

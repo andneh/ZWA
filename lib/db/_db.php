@@ -1,4 +1,5 @@
 <?php
+// TODO COMMENTS
 require("items/_article.php");
 require("items/_user.php");
 
@@ -22,8 +23,3 @@ function loadDB()
     }
     return json_decode($json, JSON_OBJECT_AS_ARRAY);
 }
-
-
-
-
-?>
