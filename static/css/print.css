@@ -1,1 +1,8 @@
 /* TODO PTINT */
+@media print {
+    body {
+        color: black;
+        background-color: white;
+        font-size: 10pt;
+    }
+}

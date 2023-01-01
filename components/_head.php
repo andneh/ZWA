@@ -7,16 +7,16 @@
     <link rel="shortcut icon" href="static/images/logo/dark.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./static/css/normalize.css">
+    <link rel="stylesheet" href="./static/css/print.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 
-    <link rel="stylesheet" class="theme" href="./static/css/theme/light.css">
-    <!-- <link rel="stylesheet" class="theme" href="./static/css/theme/dark.css">  -->
+    <link rel="stylesheet" href="./static/css/screens/s.css">
+    <link rel="stylesheet" href="./static/css/screens/m.css">
+    <link rel="stylesheet" href="./static/css/screens/l.css">
 
-    <link rel="stylesheet" href="./static/css/root.css">
-    <link rel="stylesheet" href="./static/css/header.css">
-    <link rel="stylesheet" href="./static/css/nav.css">
-    <link rel="stylesheet" href="./static/css/main.css">
-    <link rel="stylesheet" href="./static/css/wrapperArticles.css">
-    <!-- <link rel="stylesheet" href="./static/css/footer.css"> -->
+    <link rel="stylesheet" href="./static/css/dev.css">
+
+    <link rel="stylesheet" class="theme" href="./static/css/themes/light.css">
 
     <script src="./static/js/themeManager.js" defer></script>
 </head>

@@ -4,7 +4,7 @@ const theme = {
     dark: "dark",
     set: function (theme) {
         localStorage.setItem(this.item, theme);
-        document.querySelector("link.theme").href = "./static/css/theme/" + theme + ".css";
+        document.querySelector("link.theme").href = "./static/css/themes/" + theme + ".css";
         document.querySelector("img.theme").src = "./static/images/logo/" + theme + ".png";
 
     },
