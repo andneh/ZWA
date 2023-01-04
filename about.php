@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?php 
-    include "components/_head.php";
-    ?>
+<?php
+include "components/_head.php";
+?>
 
 <body class="root">
 
-    <?php 
+    <?php
     include "components/_header.php";
     ?>
 
@@ -18,9 +18,7 @@
             </p>
         </noscript>
 
-        <div  class="page about">
-            <p>©©© 2022 Andrii Nehalchuk </p>
-        </div>
+        <p>©©© 2022 Andrii Nehalchuk </p>
 
     </main>
 

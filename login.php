@@ -73,9 +73,8 @@ include "components/_head.php";
                 <p>
                     <input type="submit" name="registration" value="Registrace">
                 </p>
+            </fieldset>
         </form>
-
-
 
     </main>
 

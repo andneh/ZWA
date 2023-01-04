@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./static/css/screens/m.css">
     <link rel="stylesheet" href="./static/css/screens/l.css">
 
-    <link rel="stylesheet" href="./static/css/dev.css">
+    <!-- <link rel="stylesheet" href="./static/css/dev.css">
+ -->
 
     <link rel="stylesheet" class="theme" href="./static/css/themes/light.css">
 

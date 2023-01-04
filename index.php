@@ -24,9 +24,11 @@ include "components/_head.php";
             $autor = getUserByUid($article["uid"]);
             echo "
             <article>
-                <h2>{$article["title"]}</h2>
+            <h2>{$article["title"]}</h2>
                 <div class='info'>
                     <h3>{$autor["fname"]} {$autor["lname"]}</h3>
+                    <h3>{$article["prevhash"]}</h3>
+                    <h3>{$article["date"]}</h3>
                 </div>
                 <p>{$article["text"]}</p>
             </article>

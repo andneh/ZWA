@@ -44,7 +44,13 @@
     main {
         margin-inline: 20vw;
     }
-
+    article,
+    fieldset {
+        border: 1px var(--text) solid;
+        padding-inline: 2em;
+        padding-block: 1em;
+        margin: 1em;
+    }
     article > .info {
         display: flex;
         border: none;
