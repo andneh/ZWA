@@ -1,4 +1,7 @@
 <?php
+if (isset($_POST['login'])) {
+    header('Location: login.php');
+}
 require 'lib/_validate.php';
 //TODO testing on password
 // TODO testing login
@@ -53,76 +56,65 @@ include "components/_head.php";
                 Please, turn on JavaScript.
             </p>
         </noscript>
-        <form>
+
+        <form action="" method="post">
             <fieldset>
-                <legend>Fruit juice size</legend>
+                <legend>Regestrace</legend>
+                <?php
+                if (isset($error)) {
+                    echo "<p style=\"color:red;\">$error</p>";
+                }
+                ?>
                 <p>
-                    <label for="name">
-                        Name: <input type="text" id="name" name="user_name" />
+                    <label>
+                        Username:
+                        <input type="text" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>" name="username">
                     </label>
-                    <!-- TODO FORMS -->
-                    <label for="name">Name:</label> <input type="text" id="name" name="user_name" />
-                    <input type="radio" name="size" id="size_1" value="small" />
-                    <label for="size_1">Small</label>
                 </p>
                 <p>
-                    <input type="radio" name="size" id="size_2" value="medium" />
-                    <label for="size_2">Medium</label>
+                    <label>
+                        Jméno:
+                        <input type="text" value="<?= isset($_POST['fname']) ? $_POST['fname'] : '' ?>" name="fname">
+                    </label>
                 </p>
                 <p>
-                    <input type="radio" name="size" id="size_3" value="large" />
-                    <label for="size_3">Large</label>
+                    <label>
+                        Příjmení:
+                        <input type="text" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Data narozeni:
+                        <input type="date" value="<?= isset($_POST['birthday']) ? $_POST['birthday'] : '' ?>" name="birthday">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        email:
+                        <input type="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>" name="email">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Password:
+                        <input type="password" name="password1">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        opakujte Password:
+                        <input type="password" name="password2">
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" name="registration" value="Registrovat se">
+                </p>
+                <p>
+                    <input type="submit" name="login" value="Prihlasit se">
                 </p>
             </fieldset>
         </form>
-
-        <form action="" method="post">
-            <div>
-                <label>
-                    Username:
-                    <input type="text" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>"
-                        name="username">
-                </label>
-            </div>
-            <div>
-                <label>
-                    Jméno:
-                    <input type="text" value="<?= isset($_POST['fname']) ? $_POST['fname'] : '' ?>" name="fname">
-                </label>
-            </div>
-            <div>
-                <label>
-                    Příjmení:
-                    <input type="text" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input type="date" name="" id="">
-                </label>
-            </div>
-            <div>
-                <label>
-                    Password:
-                    <input type="password" name="password1">
-                </label>
-            </div>
-            <div>
-                <label>
-                    opakujte Password:
-                    <input type="password" name="password2">
-                </label>
-            </div>
-
-            <input type="submit" name="registration" value="Registrovat se">
-
-            <?php
-            if (isset($error)) {
-                echo "<p style=\"color:red;\">$error</p>";
-            }
-            ?>
-        </form>
-        <a href="login.php">login</a>
 
 
     </main>

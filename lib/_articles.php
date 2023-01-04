@@ -1,5 +1,5 @@
 <?php
-require("db/_db.php");
+// require("db/_db.php");
 
 function addArticle(
     $title,

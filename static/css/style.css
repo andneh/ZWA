@@ -4,77 +4,47 @@
         color: var(--text);
     }
 
-
     header {
         display: flex;
-        align-content: center;
+        /* align-content: center; */
         border-block-end: var(--text) 1px solid;
     }
 
-    header * {
-        margin: 1rem;
-    }
-
-    header > img {
+    img.logo {
         block-size: 100px;
         inline-size: 100px;
-
         margin-inline-end: auto;
-
         border: none;
     }
-    header > h1 {
-        inline-size: 60%;
-    }
-    main {
-    }
 
-    main div.page {
-        margin-inline: auto;
-        min-inline-size: 300px;
-        inline-size: 90%;
-        max-inline-size: 800px;
-    }
     nav {
-        min-inline-size: 250px;
         inline-size: 50%;
-        max-inline-size: 500px;
         display: flex;
         margin: 0px;
     }
 
-    button.nav {
-        align-content: center;
-        height: 100%;
+    .nav {
+        block-size: 50px;
+        inline-size: 50px;
         margin: auto;
-        padding: 0px;
-
-        text-align: center;
         border: none;
-        block-size: 2rem;
-        color: var(--text);
-        object-fit: scale-down;
+
         background-color: var(--black);
-        /* border-radius: 10px 10px 10px 10px; */
+        object-fit: fill;
     }
 
-    button.nav svg {
-        margin: auto;
-        /* width: 100%; */
-        /* height: 100%; */
+    svg {
+        margin: 0px;
     }
 
     path {
         fill: var(--text);
     }
-    .wrapper.articles {
-        /* block-size: 100%; */
-        inline-size: 100%;
 
-        margin: 0px;
-        padding: 0px;
-        border: none;
+    main {
+        margin-inline: 20vw;
     }
+
     article > .info {
         display: flex;
         border: none;
@@ -87,11 +57,5 @@
     article > .info > h3 {
         margin-block: 0px;
         margin-inline: auto;
-
-        border: none;
-    }
-
-    hr {
-        border: 1px black;
     }
 }

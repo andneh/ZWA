@@ -1,6 +1,8 @@
 <?php
 require 'lib/_users.php';
-
+if (isset($_POST['registration'])) {
+    header('Location: registration.php');
+}
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -8,7 +10,7 @@ if (isset($_POST['login'])) {
     if ($username && $password) {
         $user = getUserByUsername($username);
         if ($user) {
-            if (password_verify($password, $user['passhash'])) {
+            if (password_verify($password . SALT, $user['passhash'])) {
                 session_start();
                 $_SESSION['uid'] = $user['uid'];
                 header('Location: profile.php');
@@ -18,7 +20,6 @@ if (isset($_POST['login'])) {
         } else {
             $error = 'Jmeno nebo heslo byly zadny spatne';
         }
-
     } else {
         $error = 'Jmeno nebo heslo byly zadny spatne';
     }
@@ -47,28 +48,34 @@ include "components/_head.php";
 
 
         <form action="" method="post">
-            <div>
-                <label>
-                    Username:
-                    <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
-                </label>
-            </div>
-            <div>
-                <label>
-                    Password:
-                    <input type="password" name="password">
-                </label>
-            </div>
-
-            <input type="submit" name="login" value="Prihlasit se">
-
-            <?php
-            if (isset($error)) {
-                echo "<p style=\"color:red;\">$error</p>";
-            }
-            ?>
+            <fieldset>
+                <legend>Autorizace</legend>
+                <?php
+                if (isset($error)) {
+                    echo "<p style=\"color:red;\">$error</p>";
+                }
+                ?>
+                <p>
+                    <label>
+                        Username:
+                        <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Password:
+                        <input type="password" name="password">
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" name="login" value="Prihlasit se">
+                </p>
+                <p>
+                    <input type="submit" name="registration" value="Registrace">
+                </p>
         </form>
-        <a href="registration.php">Registrace</a>
+
+
 
     </main>
 

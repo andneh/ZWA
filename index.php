@@ -1,5 +1,7 @@
 <?php
+require("lib/db/_db.php");
 require("lib/_articles.php");
+require("lib/_users.php");
 ?>
 
 
@@ -19,10 +21,13 @@ include "components/_head.php";
 
         <?php
         foreach (getArticles() as $article) {
+            $autor = getUserByUid($article["uid"]);
             echo "
             <article>
                 <h2>{$article["title"]}</h2>
-                <h3>{$article["uid"]}</h3>
+                <div class='info'>
+                    <h3>{$autor["fname"]} {$autor["lname"]}</h3>
+                </div>
                 <p>{$article["text"]}</p>
             </article>
             ";
