@@ -1,5 +1,6 @@
 <?php
 define("SALT", "tlas");
+// Creating one user unit function with hash and real time data
 function user(
     $username,
     $fname,
@@ -16,5 +17,4 @@ function user(
             PASSWORD_DEFAULT
         )
     );
-    // TODO PASSWORD SALT
 }

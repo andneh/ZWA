@@ -1,13 +1,9 @@
-/* TODO PTINT */
 @media print {
     body {
         color: black;
         background-color: white;
         font-size: 10pt;
         margin: 20px;
-    }
-    header {
-        /* border: none; */
     }
     nav {
         display: none;

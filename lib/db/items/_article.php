@@ -1,5 +1,5 @@
 <?php
-
+// Creating one article unit function with hash and real time data
 function article(
     $uid,
     $title,
