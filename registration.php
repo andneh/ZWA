@@ -1,4 +1,7 @@
 <?php
+
+require "lib/_db.php";
+
 if (isset($_POST['login'])) {
     header('Location: login.php');
 }

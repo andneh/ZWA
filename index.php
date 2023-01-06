@@ -1,7 +1,5 @@
 <?php
 require("lib/db/_db.php");
-require("lib/_articles.php");
-require("lib/_users.php");
 ?>
 
 

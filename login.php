@@ -1,5 +1,6 @@
 <?php
-require 'lib/_users.php';
+require "lib/_db.php";
+
 if (isset($_POST['registration'])) {
     // registration button
     header('Location: registration.php');

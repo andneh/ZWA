@@ -1,5 +1,6 @@
 <?php
-require "lib/_users.php";
+require "lib/_db.php";
+
 session_start();
 $uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL;
 

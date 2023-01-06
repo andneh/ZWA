@@ -1,7 +1,4 @@
 <?php
-include("db/_db.php");
-// include DB module
-
 function addArticle(
     $title,
     $text
@@ -21,4 +18,16 @@ function getArticles()
     return loadDB()["articles"];
 }
 
-//TODO get articles by uid
+function getArticleByUid($uid)
+{
+    // get article units from data array by user id
+    $articles = array();
+
+    foreach (getArticles() as $article) {
+        if ($uid == $article['uid']) {
+            array_push($articles, $article);
+        }
+    }
+    // return answer
+    return $articles;
+}

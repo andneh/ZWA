@@ -1,7 +1,4 @@
 <?php
-include("db/_db.php");
-// include database module
-
 function addUser(
     $username,
     $fname,
