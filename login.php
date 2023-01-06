@@ -1,12 +1,16 @@
 <?php
 require 'lib/_users.php';
 if (isset($_POST['registration'])) {
+    // registration button
     header('Location: registration.php');
 }
 if (isset($_POST['login'])) {
+    // login process
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+
+    // TODO user validate
     if ($username && $password) {
         $user = getUserByUsername($username);
         if ($user) {

@@ -20,6 +20,7 @@ include "components/_head.php";
     <main>
 
         <?php
+        // get all articles and iterate it with constructing the articles
         foreach (getArticles() as $article) {
             $autor = getUserByUid($article["uid"]);
             echo "

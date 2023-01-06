@@ -65,14 +65,17 @@ function validatePassword($password1, $password2)
     // function to validate password
     switch (false) {
         case $password1:
+            // check if password empty
             $error = "Heslo ne ma byt prazne";
             return false;
 
         case strlen($password1) >= 8:
+            // check password length
             $error = "heslo ma byt vic nez 8";
             return false;
 
         case $password1 == $password2:
+            // check password repeating
             $error = "hesla ma byt stejne";
             return false;
     }

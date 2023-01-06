@@ -1,3 +1,5 @@
+<!-- HTML head component -->
+
 <head>
     <meta charset="UTF-8">
 
