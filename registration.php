@@ -7,6 +7,7 @@ require 'lib/_validate.php';
 // TODO testing login
 // TODO add user
 // TODO auto login
+// TODO input normalization
 if (isset($_POST['registration'])) {
     switch (false) {
         case $error = validateUserName($_POST['username']):
