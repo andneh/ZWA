@@ -1,7 +1,8 @@
 <?php
-require("lib/db/_db.php");
-?>
+require("lib/_db.php");
+require("components/_articlesWrapper.php");
 
+?>
 
 <!DOCTYPE html>
 <html lang="cs">
@@ -18,21 +19,7 @@ include "components/_head.php";
     <main>
 
         <?php
-        // get all articles and iterate it with constructing the articles
-        foreach (getArticles() as $article) {
-            $autor = getUserByUid($article["uid"]);
-            echo "
-            <article>
-            <h2>{$article["title"]}</h2>
-                <div class='info'>
-                    <h3>{$autor["fname"]} {$autor["lname"]}</h3>
-                    <h3>{$article["prevhash"]}</h3>
-                    <h3>{$article["date"]}</h3>
-                </div>
-                <p>{$article["text"]}</p>
-            </article>
-            ";
-        }
+        articlesWrapper(getArticles());
         ?>
 
     </main>

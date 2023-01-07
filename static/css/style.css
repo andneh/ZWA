@@ -6,13 +6,13 @@
 
     header {
         display: flex;
-        border-block-end: var(--text) 1px solid;
+        border-block-end: var(--line) 1px solid;
     }
 
     img.logo {
         block-size: 100px;
         inline-size: 100px;
-        margin-inline-end: auto;
+        /* margin-inline-end: auto; */
         border: none;
     }
 
@@ -34,7 +34,6 @@
     svg {
         margin: 0px;
     }
-
     path {
         fill: var(--text);
     }
@@ -42,24 +41,31 @@
         margin-inline: auto;
     }
 
-    article,
+    /* article, */
     fieldset {
-        border: 1px var(--text) solid;
-        padding-inline: 2em;
-        padding-block: 1em;
-        margin: 1em;
+        border: 1px var(--line) solid;
+        /* padding-inline: 2em; */
+        padding: 0px;
+        margin: 1rem;
     }
-    article > .info {
+
+    .info {
         display: flex;
-        border: none;
+    }
+    .info * {
+        margin: 0px;
     }
 
-    article * {
-        border: none;
+    fieldset > * {
+        margin-block: 0.5rem;
+        margin-inline: 1rem;
     }
-
-    article > .info > h3 {
-        margin-block: 0px;
+    .spacer {
         margin-inline: auto;
+    }
+    textarea {
+        inline-size: 100%;
+        block-size: 5rem;
+        resize: none;
     }
 }

@@ -1,43 +1,53 @@
 <?php
 
 require "lib/_db.php";
+require 'lib/_validate.php';
 
 if (isset($_POST['login'])) {
     header('Location: login.php');
 }
-require 'lib/_validate.php';
+
+
+
+
+
+
+
+
 //TODO testing on password
 // TODO testing login
 // TODO add user
 // TODO auto login
 // TODO input normalization
+
+
 if (isset($_POST['registration'])) {
-    switch (false) {
+    switch (true) {
         case $error = validateUserName($_POST['username']):
             break;
 
-        case validateFName($_POST['fname']):
+        case $error = validateFName($_POST['fname']):
             break;
 
-        case validateLName($_POST['lname']):
+        case $error = validateLName($_POST['lname']):
             break;
 
-        case validatePassword($_POST['password1'], $_POST['password2']):
+        case $error = validatePassword($_POST['password1'], $_POST['password2']):
             break;
     }
-    echo $error;
-    // if (!$error) {
-    //     addUser(
-    //         $_POST['username'],
-    //         $_POST['fname'],
-    //         $_POST['lname'],
-    //         $_POST['password1']
-    //     );
-    //     $user = getUserByUsername($_POST['username']);
-    //     session_start();
-    //     $_SESSION['uid'] = $user['uid'];
-    //     header('Location: profile.php');
-    // }
+
+    if ($error == false) {
+        addUser(
+            $_POST['username'],
+            $_POST['fname'],
+            $_POST['lname'],
+            $_POST['password1']
+        );
+        $user = getUserByUsername($_POST['username']);
+        session_start();
+        $_SESSION['uid'] = $user['uid'];
+        header('Location: profile.php');
+    }
 }
 ?>
 
@@ -63,7 +73,7 @@ include "components/_head.php";
 
         <form action="" method="post">
             <fieldset>
-                <legend>Regestrace</legend>
+                <legend>Registrace</legend>
                 <?php
                 if (isset($error)) {
                     echo "<p style=\"color:red;\">$error</p>";
@@ -71,51 +81,58 @@ include "components/_head.php";
                 ?>
                 <p>
                     <label>
-                        Username:
-                        <input type="text" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>" name="username">
+                        Jméno uživatele:
+                        <br />
+                        <input type="text" minlength="4" maxlength="20" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>" name="username">
                     </label>
                 </p>
                 <p>
                     <label>
                         Jméno:
-                        <input type="text" value="<?= isset($_POST['fname']) ? $_POST['fname'] : '' ?>" name="fname">
+                        <br />
+                        <input type="text" minlength="4" maxlength="20" value="<?= isset($_POST['fname']) ? $_POST['fname'] : '' ?>" name="fname">
                     </label>
                 </p>
                 <p>
                     <label>
                         Příjmení:
-                        <input type="text" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
+                        <br />
+                        <input type="text" minlength="4" maxlength="20" value="<?= isset($_POST['lname']) ? $_POST['lname'] : '' ?>" name="lname">
                     </label>
                 </p>
                 <p>
                     <label>
-                        Data narozeni:
+                        Datum narození:
+                        <br />
                         <input type="date" value="<?= isset($_POST['birthday']) ? $_POST['birthday'] : '' ?>" name="birthday">
                     </label>
                 </p>
                 <p>
                     <label>
-                        email:
+                        E-mail:
+                        <br />
                         <input type="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>" name="email">
                     </label>
                 </p>
                 <p>
                     <label>
-                        Password:
-                        <input type="password" name="password1">
+                        Heslo:
+                        <br />
+                        <input type="password" minlength="8" name="password1">
                     </label>
                 </p>
                 <p>
                     <label>
-                        opakujte Password:
-                        <input type="password" name="password2">
+                        Zopakujte heslo:
+                        <br />
+                        <input type="password" minlength="8" name="password2">
                     </label>
                 </p>
                 <p>
-                    <input type="submit" name="registration" value="Registrovat se">
+                    <button type="submit" name="registration" value="1">Registrace</button>
                 </p>
                 <p>
-                    <input type="submit" name="login" value="Prihlasit se">
+                    <button type="submit" name="login" value="1">Přihlášení</button>
                 </p>
             </fieldset>
         </form>

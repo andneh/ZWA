@@ -1,10 +1,13 @@
 <?php
+require("components/_articlesWrapper.php");
 require "lib/_db.php";
 
-session_start();
-$uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL;
+if (isset($_POST['logout'])) {
+    header('Location: logout.php');
+}
 
-if ($uid) {
+session_start();
+if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
     $user = getUserByUid($uid);
 } else {
     header('Location: login.php');
@@ -32,25 +35,50 @@ include "components/_head.php";
             </p>
         </noscript>
 
-        <div class="page profile">
-            <div class="profile info">
+
+        <form action="" method="post">
+            <fieldset>
+                <legend>Profil</legend>
                 <h2>
                     <?php
                     echo "{$user['fname']} {$user['lname']}";
                     ?>
                 </h2>
-                <a href="logout.php">logout</a>
-            </div>
+                <p>
+                    <button type="submit" name="logout" value="1">Odhlásit se</button>
+                </p>
+            </fieldset>
+        </form>
 
-            <form class="write" action="#" method="post">
-                <!-- TODO add article -->
-                <input class="write" placeholder="New article" type="text">
-                <button class="write" type="submit">publish</button>
-            </form>
-            <div class="wrapper articles colection"></div>
-            <!--  TODO get articles by uid and sort -->
-        </div>
 
+        <form class="newArtilce" action="" method="post">
+            <fieldset>
+                <legend>Nový článek</legend>
+                <p>
+                    <label>
+                        Název:
+                        <input type="text" name="title" placeholder="Title">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Text:
+                        <!-- <input type="text" placeholder="Text"> -->
+                    </label>
+                </p>
+                <p>
+                    <textarea name="text" placeholder="Text">
+                    </textarea>
+                </p>
+                <p>
+                    <button type="submit">Publikovat</button>
+                </p>
+            </fieldset>
+        </form>
+
+        <?php
+        articlesWrapper(getArticlesByUid($user["uid"]));
+        ?>
     </main>
 
 </body>

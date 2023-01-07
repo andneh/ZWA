@@ -53,7 +53,7 @@ include "components/_head.php";
 
 
         <form action="" method="post">
-            <fieldset>
+            <fieldsetlll>
                 <legend>Autorizace</legend>
                 <?php
                 if (isset($error)) {
@@ -62,23 +62,25 @@ include "components/_head.php";
                 ?>
                 <p>
                     <label>
-                        Username:
-                        <input type="text" value="<?= isset($username) ? $username : '' ?>" name="username">
+                        Jméno uživatele:
                     </label>
+                    <br />
+                    <input type="text" minlength="4" maxlength="20" value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
                 <p>
                     <label>
-                        Password:
-                        <input type="password" name="password">
+                        Heslo:
                     </label>
+                    <br />
+                    <input minlength="8" type="password" name="password">
                 </p>
                 <p>
-                    <input type="submit" name="login" value="Prihlasit se">
+                    <button type="submit" name="login" value="1">Přihlásit se</button>
                 </p>
                 <p>
-                    <input type="submit" name="registration" value="Registrace">
+                    <button type="submit" name="registration" value="1">Registrace</button>
                 </p>
-            </fieldset>
+            </fieldsetlll>
         </form>
 
     </main>

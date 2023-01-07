@@ -18,7 +18,7 @@ function getArticles()
     return loadDB()["articles"];
 }
 
-function getArticleByUid($uid)
+function getArticlesByUid($uid)
 {
     // get article units from data array by user id
     $articles = array();

@@ -18,7 +18,7 @@ include "components/_head.php";
             </p>
         </noscript>
 
-        <p>©©© 2022 Andrii Nehalchuk </p>
+        <p>© 2022 Andrii Nehalchuk </p>
 
     </main>
 
