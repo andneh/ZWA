@@ -1,5 +1,5 @@
 <?php
-function articlesWrapper($articles)
+function articlesWrapper($articles, $btnAct, $btnNm)
 {
     echo "<div class=\"articleWrapper\">";
 
@@ -8,25 +8,28 @@ function articlesWrapper($articles)
         $autor = getUserByUid($article["uid"]);
         echo "
         <article>
-            <form>
+            <form action=\"\" method=\"post\">
                 <fieldset>
                     <legend>
                         {$autor["fname"]} {$autor["lname"]}
                     </legend>
-                    <h2>
-                        {$article["title"]}
-                    </h2>
                     <div class=\"info\">
                         <h6>
                             {$article["date"]} 
                         </h6>
                         <p class=\"spacer\"></p>
                         <h6>
-                            {$article["prevhash"]}
+                            #{$article["prevhash"]}
                         </h6>
                     </div>
+                    <h2>
+                        {$article["title"]}
+                    </h2>
                     <p>
                         {$article["text"]}
+                    </p>
+                    <p>
+                        <button type=\"submit\" name=\"{$btnAct}\" value=\"{$article["aid"]}\">{$btnNm}</button>
                     </p>
                 </fieldset>
             </form>

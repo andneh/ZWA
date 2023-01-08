@@ -68,4 +68,7 @@
         block-size: 5rem;
         resize: none;
     }
+    .error {
+        color: red;
+    }
 }

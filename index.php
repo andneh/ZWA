@@ -19,7 +19,7 @@ include "components/_head.php";
     <main>
 
         <?php
-        articlesWrapper(getArticles());
+        articlesWrapper(getArticles(), "like", "líbí se mi");
         ?>
 
     </main>

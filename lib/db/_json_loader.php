@@ -7,6 +7,11 @@ define('DB', 'db/db.json');
 
 function saveDB($data)
 {
+    // usort($data["articles"], "date_sort");
+    // usort($data["articles"], function ($a, $b) {
+    //     return strtotime($a["date"]) - strtotime($b["date"]);
+    // });
+
     // function for saving DB which need data array with all database in it
     file_put_contents(DB, json_encode($data));
 }

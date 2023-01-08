@@ -1,37 +1,28 @@
 <?php
 
 require "lib/_db.php";
-require 'lib/_validate.php';
+require 'lib/validation/_user.php';
 
 if (isset($_POST['login'])) {
+    // login page
     header('Location: login.php');
 }
 
 if (isset($_POST['registration'])) {
-
-    $username = strtolower(str_replace(' ', '', $_POST['username']));
-    $fname = ucfirst(strtolower(str_replace(' ', '', $_POST['fname'])));
-    $lname = ucfirst(strtolower(str_replace(' ', '', $_POST['lname'])));
-    $password1 = $_POST['password1'];
-    $password2 = $_POST['password2'];
+    // registration process
+    $error = validateUser(
+        // validate normalized input
+        $username = strtolower(str_replace(' ', '', $_POST['username'])),
+        $fname = ucfirst(strtolower(str_replace(' ', '', $_POST['fname']))),
+        $lname = ucfirst(strtolower(str_replace(' ', '', $_POST['lname']))),
+        $password1 = $_POST['password1'],
+        $password2 = $_POST['password2'],
+    );
     $birthday = $_POST['birthday'];
     $email = strtolower(str_replace(' ', '', $_POST['email']));
 
-    switch (true) {
-        case $error = validateUserName($username):
-            break;
-
-        case $error = validateFName($fname):
-            break;
-
-        case $error = validateLName($lname):
-            break;
-
-        case $error = validatePassword($password1, $password2):
-            break;
-    }
-
     if ($error == false) {
+        // check errors
         addUser(
             $username,
             $fname,
@@ -39,8 +30,10 @@ if (isset($_POST['registration'])) {
             $password1
         );
         $user = getUserByUsername($username);
+        // create user
         session_start();
         $_SESSION['uid'] = $user['uid'];
+        // auto login
         header('Location: profile.php');
     }
 }
@@ -73,7 +66,7 @@ include "components/_head.php";
                 <legend>Registrace</legend>
                 <?php
                 if (isset($error)) {
-                    echo "<p style=\"color:red;\">$error</p>";
+                    echo "<p class=\"error\">$error</p>";
                 }
                 ?>
                 <p>

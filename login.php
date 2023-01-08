@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     $username = strtolower(str_replace(' ', '', $_POST['username']));
     $password = $_POST['password'];
 
-    // TODO shit code
+    // TODO shit code validation
     if ($username && $password) {
         $user = getUserByUsername($username);
         if ($user) {
@@ -58,7 +58,7 @@ include "components/_head.php";
                 <legend>Autorizace</legend>
                 <?php
                 if (isset($error)) {
-                    echo "<p style=\"color:red;\">$error</p>";
+                    echo "<p class=\"error\">$error</p>";
                 }
                 ?>
                 <p>

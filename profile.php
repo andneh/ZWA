@@ -1,14 +1,43 @@
 <?php
 require("components/_articlesWrapper.php");
 require "lib/_db.php";
+require "lib/validation/_article.php";
 
 if (isset($_POST['logout'])) {
+    // logout
     header('Location: logout.php');
 }
 
 session_start();
 if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
+    // check user login
     $user = getUserByUid($uid);
+
+    if (isset($_POST["article"])) {
+        // new article
+        $error = validateArticle(
+            // validate article
+            $title = preg_replace('!\s+!', ' ', $_POST["title"]),
+            $text = preg_replace('!\s+!', ' ', $_POST["text"]),
+        );
+        if ($error == false) {
+            // check errors
+            addArticle($user["uid"], $title, $text);
+            // create article
+            header('Location: profile.php');
+        }
+    }
+
+    if (isset($_POST["delete"])) {
+        // delete article
+        $aid = $_POST["delete"];
+        if ($user["uid"] == getArticlesByAid($aid)["uid"]) {
+            // check if owner delete article
+            deleteArticle($aid);
+            // delete
+            header('Location: profile.php');
+        }
+    }
 } else {
     header('Location: login.php');
 }
@@ -51,32 +80,36 @@ include "components/_head.php";
         </form>
 
 
-        <form class="newArtilce" action="" method="post">
+        <form class="newArticle" action="" method="post">
             <fieldset>
                 <legend>Nový článek</legend>
+                <?php
+                if (isset($error)) {
+                    echo "<p class=\"error\">$error</p>";
+                }
+                ?>
                 <p>
                     <label>
                         Název:
                     </label>
                     <br />
-                    <input type="text" name="title" placeholder="Title">
+                    <input type="text" required minlength="4" maxlength="20" name="title" placeholder="Title">
                 </p>
                 <p>
                     <label>
                         Text:
-                        <!-- <input type="text" placeholder="Text"> -->
                     </label>
                     <br />
-                    <textarea name="text" placeholder="Text"></textarea>
+                    <textarea name="text" required minlength="4" maxlength="500" placeholder="Text"></textarea>
                 </p>
                 <p>
-                    <button type="submit">Publikovat</button>
+                    <button type="submit" name="article">Publikovat</button>
                 </p>
             </fieldset>
         </form>
 
         <?php
-        articlesWrapper(getArticlesByUid($user["uid"]));
+        articlesWrapper(getArticlesByUid($user["uid"]), "delete", "Smazat");
         ?>
     </main>
 

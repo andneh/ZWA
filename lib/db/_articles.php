@@ -1,5 +1,6 @@
 <?php
 function addArticle(
+    $uid,
     $title,
     $text
 ) {
@@ -8,7 +9,7 @@ function addArticle(
     $hash = "hash";
     $data = loadDB();
     // adding article to the data array
-    array_push($data['articles'], article(1, $title, $text, $hash));
+    array_push($data['articles'], article($uid, $title, $text, $hash));
     saveDB($data);
 }
 
@@ -16,6 +17,14 @@ function getArticles()
 {
     // function of get all article from the data array
     return loadDB()["articles"];
+}
+function getArticlesByAid($aid)
+{
+    foreach (getArticles() as $article) {
+        if ($aid == $article['aid']) {
+            return $article;
+        }
+    }
 }
 
 function getArticlesByUid($uid)
@@ -30,4 +39,16 @@ function getArticlesByUid($uid)
     }
     // return answer
     return $articles;
+}
+
+function deleteArticle($aid)
+{
+    $data = loadDB();
+    for ($i = 0; $i < count($data["articles"]); $i++) {
+        if ($data["articles"][$i]["aid"] == $aid) {
+            unset($data["articles"][$i]);
+            saveDB($data);
+            return;
+        }
+    }
 }
