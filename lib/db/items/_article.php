@@ -4,7 +4,8 @@ function article(
     $uid,
     $title,
     $text
-) {
+)
+{
     $date = date("d.m.Y");
     // Creating one article unit function with hash and real time data
     return array(

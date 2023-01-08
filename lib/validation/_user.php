@@ -96,6 +96,13 @@ function validatePassword($value, $password2)
             // check min length
             return $item . $errors["short8"];
 
+        case preg_match("/[a-z]/i", $item):
+            // check fi
+            return $item . " musí obsahovat písmena";
+
+        case preg_match('/[0-9]/', $item):
+            return $item . " musí obsahovat čísla";
+
         case $value == $password2:
             // check passwords same
             return $item . $errors["same"];
