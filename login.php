@@ -56,7 +56,7 @@ include "components/_head.php";
                     <label>
                         Jméno uživatele:
                     </label>
-                    <br />
+                    <br>
                     <input type="text" minlength="4" maxlength="20" required
                         value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
@@ -64,7 +64,7 @@ include "components/_head.php";
                     <label>
                         Heslo:
                     </label>
-                    <br />
+                    <br>
                     <input minlength="8" type="password" required name="password">
                 </p>
                 <p>
@@ -74,7 +74,7 @@ include "components/_head.php";
                     <button form="registration" type="submit" name="registration" value="1">Registrace</button>
                 </p>
             </fieldset>
-
+        </form>
     </main>
 
     <?php

@@ -3,8 +3,9 @@ function addUser(
     $username,
     $fname,
     $lname,
-    $password,
-) {
+    $password
+)
+{
     // create and add new user to the database
     $data = loadDB();
     $uid = uniqid();

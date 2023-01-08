@@ -107,8 +107,9 @@ function validateUser(
     $fname,
     $lname,
     $password1,
-    $password2,
-) {
+    $password2
+)
+{
     // function to validate user
 
     switch (true) {

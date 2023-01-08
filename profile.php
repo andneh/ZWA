@@ -92,14 +92,14 @@ include "components/_head.php";
                     <label>
                         Název:
                     </label>
-                    <br />
+                    <br>
                     <input type="text" required minlength="4" maxlength="20" name="title" placeholder="Title">
                 </p>
                 <p>
                     <label>
                         Text:
                     </label>
-                    <br />
+                    <br>
                     <textarea name="text" required minlength="4" maxlength="500" placeholder="Text"></textarea>
                 </p>
                 <p>
