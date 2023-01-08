@@ -1,1 +1,36 @@
-{"users":{"63ba2c9608544":{"uid":"63ba2c9608544","username":"root","fname":"Foo","lname":"Bar","hash":"$2y$10$ldflnWNLkwBM62k0NPG0A.\/QDh5IFxL3DCk5Ec0zbxC0zKsnQwQum"},"63ba2c961d8e8":{"uid":"63ba2c961d8e8","username":"andrew","fname":"Andrew","lname":"Nehalchuk","hash":"$2y$10$dxS3HqiNnUnJuDuIAuj4GeeJi1VNkEx2gCbORDWT\/BtbD4ZbAyHYC"}},"articles":{"63ba2c9608558":{"aid":"63ba2c9608558","uid":"63ba2c9608544","title":"Title","text":"Text content.","date":"08.01.2023","hash":"9a78030b6712b02a00d7652cf975bbd7"},"63ba2ce69edf8":{"aid":"63ba2ce69edf8","uid":"63ba2c961d8e8","title":"My semestral work","text":"I almost done my semestral work hope it works..","date":"08.01.2023","hash":"903cec9949e36f4c121fbd4bccb053f6"}}}
+{
+    "users": {
+        "63ba2c9608544": {
+            "uid": "63ba2c9608544",
+            "username": "root",
+            "fname": "Foo",
+            "lname": "Bar",
+            "hash": "$2y$10$ldflnWNLkwBM62k0NPG0A.\/QDh5IFxL3DCk5Ec0zbxC0zKsnQwQum"
+        },
+        "63ba2c961d8e8": {
+            "uid": "63ba2c961d8e8",
+            "username": "andrew",
+            "fname": "Andrew",
+            "lname": "Nehalchuk",
+            "hash": "$2y$10$dxS3HqiNnUnJuDuIAuj4GeeJi1VNkEx2gCbORDWT\/BtbD4ZbAyHYC"
+        }
+    },
+    "articles": {
+        "63ba2c9608558": {
+            "aid": "63ba2c9608558",
+            "uid": "63ba2c9608544",
+            "title": "Title",
+            "text": "Text content.",
+            "date": "08.01.2023",
+            "hash": "9a78030b6712b02a00d7652cf975bbd7"
+        },
+        "63ba2ce69edf8": {
+            "aid": "63ba2ce69edf8",
+            "uid": "63ba2c961d8e8",
+            "title": "My semestral work",
+            "text": "I almost done my semestral work hope it works..",
+            "date": "08.01.2023",
+            "hash": "903cec9949e36f4c121fbd4bccb053f6"
+        }
+    }
+}

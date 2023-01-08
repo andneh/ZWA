@@ -19,6 +19,7 @@ include "components/_head.php";
     <main>
 
         <?php
+        // TODO sorting and filtering
         articlesWrapper(getArticles(), "like", "líbí se mi");
         ?>
 

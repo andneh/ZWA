@@ -1,5 +1,6 @@
 <?php
 require "lib/_db.php";
+require "lib/validation/_login.php";
 
 if (isset($_POST['registration'])) {
     // registration button
@@ -8,25 +9,15 @@ if (isset($_POST['registration'])) {
 if (isset($_POST['login'])) {
 
     // login process
-    $username = strtolower(str_replace(' ', '', $_POST['username']));
-    $password = $_POST['password'];
+    $error = validateLogin(
+        $username = strtolower(str_replace(' ', '', $_POST['username'])),
+        $_POST['password'],
+    );
 
-    // TODO shit code validation
-    if ($username && $password) {
-        $user = getUserByUsername($username);
-        if ($user) {
-            if (password_verify($user["username"] . $password . $user["uid"], $user['hash'])) {
-                session_start();
-                $_SESSION['uid'] = $user['uid'];
-                header('Location: profile.php');
-            } else {
-                $error = 'Jmeno nebo heslo byly zadny spatne';
-            }
-        } else {
-            $error = 'Jmeno nebo heslo byly zadny spatne';
-        }
-    } else {
-        $error = 'Jmeno nebo heslo byly zadny spatne';
+    if ($error == false) {
+        session_start();
+        $_SESSION['uid'] = getUserByUsername($username)["uid"];
+        header('Location: profile.php');
     }
 }
 
@@ -66,7 +57,8 @@ include "components/_head.php";
                         Jméno uživatele:
                     </label>
                     <br />
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($username) ? $username : '' ?>" name="username">
+                    <input type="text" minlength="4" maxlength="20" required
+                        value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
                 <p>
                     <label>

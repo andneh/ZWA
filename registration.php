@@ -74,21 +74,24 @@ include "components/_head.php";
                         Jméno uživatele:
                     </label>
                     <br />
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($username) ? $username : '' ?>" name="username">
+                    <input type="text" minlength="4" maxlength="20" required
+                        value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
                 <p>
                     <label>
                         Jméno:
                     </label>
                     <br />
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>" name="fname">
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>"
+                        name="fname">
                 </p>
                 <p>
                     <label>
                         Příjmení:
                     </label>
                     <br />
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>" name="lname">
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>"
+                        name="lname">
                 </p>
                 <p>
                     <label>
