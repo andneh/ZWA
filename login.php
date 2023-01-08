@@ -6,8 +6,9 @@ if (isset($_POST['registration'])) {
     header('Location: registration.php');
 }
 if (isset($_POST['login'])) {
+
     // login process
-    $username = $_POST['username'];
+    $username = strtolower(str_replace(' ', '', $_POST['username']));
     $password = $_POST['password'];
 
 
@@ -51,9 +52,10 @@ include "components/_head.php";
             </p>
         </noscript>
 
-
-        <form action="" method="post">
-            <fieldsetlll>
+        <form action="" id="registration" method="post">
+        </form>
+        <form id="login" action="" method="post">
+            <fieldset>
                 <legend>Autorizace</legend>
                 <?php
                 if (isset($error)) {
@@ -65,23 +67,22 @@ include "components/_head.php";
                         Jméno uživatele:
                     </label>
                     <br />
-                    <input type="text" minlength="4" maxlength="20" value="<?= isset($username) ? $username : '' ?>" name="username">
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
                 <p>
                     <label>
                         Heslo:
                     </label>
                     <br />
-                    <input minlength="8" type="password" name="password">
+                    <input minlength="8" type="password" required name="password">
                 </p>
                 <p>
                     <button type="submit" name="login" value="1">Přihlásit se</button>
                 </p>
                 <p>
-                    <button type="submit" name="registration" value="1">Registrace</button>
+                    <button form="registration" type="submit" name="registration" value="1">Registrace</button>
                 </p>
-            </fieldsetlll>
-        </form>
+            </fieldset>
 
     </main>
 
