@@ -1,18 +1,21 @@
 <?php
 function article(
+    $aid,
     $uid,
     $title,
-    $text,
-    $hash
+    $text
 ) {
+    $date = date("d.m.Y");
     // Creating one article unit function with hash and real time data
-    // TODO ARRAY HASHS
     return array(
-        "aid" => uniqid(),
+        "aid" => $aid,
         "uid" => $uid,
         "title" => $title,
         "text" => $text,
-        "date" => date('jS \of F Y'),
-        "prevhash" => $hash,
+        "date" => $date,
+        "hash" => hash(
+            "md5",
+            $aid . $uid . $title . $text . $date
+        ),
     );
 }

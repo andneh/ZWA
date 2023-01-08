@@ -130,6 +130,10 @@ include "components/_head.php";
 
     </main>
 
+    <?php
+    include "components/_footer.php";
+    ?>
+
 </body>
 
 </html>

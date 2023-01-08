@@ -9,7 +9,9 @@ function addArticle(
     $hash = "hash";
     $data = loadDB();
     // adding article to the data array
-    array_push($data['articles'], article($uid, $title, $text, $hash));
+    $aid = uniqid();
+    $data['articles'][$aid] = article($aid, $uid, $title, $text, $hash);
+    // array_push(, $aid => article($uid, $title, $text, $hash));
     saveDB($data);
 }
 
@@ -20,11 +22,7 @@ function getArticles()
 }
 function getArticlesByAid($aid)
 {
-    foreach (getArticles() as $article) {
-        if ($aid == $article['aid']) {
-            return $article;
-        }
-    }
+    return getArticles()[$aid];
 }
 
 function getArticlesByUid($uid)
@@ -44,11 +42,6 @@ function getArticlesByUid($uid)
 function deleteArticle($aid)
 {
     $data = loadDB();
-    for ($i = 0; $i < count($data["articles"]); $i++) {
-        if ($data["articles"][$i]["aid"] == $aid) {
-            unset($data["articles"][$i]);
-            saveDB($data);
-            return;
-        }
-    }
+    unset($data["articles"][$aid]);
+    saveDB($data);
 }

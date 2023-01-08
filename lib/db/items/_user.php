@@ -1,19 +1,20 @@
 <?php
-define("SALT", "tlas");
 function user(
+    $uid,
     $username,
     $fname,
     $lname,
-    $password,
+    $password
 ) {
     // Creating one user unit function with hash and real time data
     return array(
-        "uid" => uniqid(),
+        "uid" => $uid,
         "username" => strtolower($username),
         "fname" => ucwords($fname),
         "lname" => ucwords($lname),
-        "passhash" => password_hash(
-            $password . SALT,
+        "hash" => password_hash(
+            $username . $password .
+                $uid,
             PASSWORD_DEFAULT
         )
     );

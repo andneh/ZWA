@@ -68,11 +68,11 @@ include "components/_head.php";
         <form action="" method="post">
             <fieldset>
                 <legend>Profil</legend>
-                <h2>
+                <h1>
                     <?php
                     echo "{$user['fname']} {$user['lname']}";
                     ?>
-                </h2>
+                </h1>
                 <p>
                     <button type="submit" name="logout" value="1">Odhlásit se</button>
                 </p>
@@ -112,6 +112,10 @@ include "components/_head.php";
         articlesWrapper(getArticlesByUid($user["uid"]), "delete", "Smazat");
         ?>
     </main>
+
+    <?php
+    include "components/_footer.php";
+    ?>
 
 </body>
 

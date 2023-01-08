@@ -7,11 +7,6 @@ define('DB', 'db/db.json');
 
 function saveDB($data)
 {
-    // usort($data["articles"], "date_sort");
-    // usort($data["articles"], function ($a, $b) {
-    //     return strtotime($a["date"]) - strtotime($b["date"]);
-    // });
-
     // function for saving DB which need data array with all database in it
     file_put_contents(DB, json_encode($data));
 }
@@ -23,9 +18,11 @@ function loadDB()
     $json = file_get_contents(DB);
     if ($json == NULL) {
         // check if database exist
+        $uid = uniqid();
+        $aid = uniqid();
         $data = array(
-            "users" => array(user("root", "Foo", "Bar", "root")),
-            "articles" => array(article(0, "Title", "Text content.", "HASH"))
+            "users" => array($uid => user($uid, "root", "Foo", "Bar", "root")),
+            "articles" => array($aid => article($aid, $uid, "Title", "Text content."))
         );
         saveDB($data);
         return ($data);

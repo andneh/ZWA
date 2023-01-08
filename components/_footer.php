@@ -1,5 +1,7 @@
 <!-- HTML Footer component -->
 
 <footer>
-    © Andrii Nehalchuk 2022
+    <p>
+        © <a href="mailto:nehaland@cvut.cz">Andrii Nehalchuk</a> 2022
+    </p>
 </footer>

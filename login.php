@@ -15,7 +15,7 @@ if (isset($_POST['login'])) {
     if ($username && $password) {
         $user = getUserByUsername($username);
         if ($user) {
-            if (password_verify($password . SALT, $user['passhash'])) {
+            if (password_verify($user["username"] . $password . $user["uid"], $user['hash'])) {
                 session_start();
                 $_SESSION['uid'] = $user['uid'];
                 header('Location: profile.php');
@@ -84,6 +84,10 @@ include "components/_head.php";
             </fieldset>
 
     </main>
+
+    <?php
+    include "components/_footer.php";
+    ?>
 
 </body>
 
