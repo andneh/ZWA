@@ -11,8 +11,7 @@ if (isset($_POST['login'])) {
     $username = strtolower(str_replace(' ', '', $_POST['username']));
     $password = $_POST['password'];
 
-
-    // TODO user validate
+    // TODO shit code
     if ($username && $password) {
         $user = getUserByUsername($username);
         if ($user) {

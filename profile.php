@@ -57,18 +57,17 @@ include "components/_head.php";
                 <p>
                     <label>
                         Název:
-                        <input type="text" name="title" placeholder="Title">
                     </label>
+                    <br />
+                    <input type="text" name="title" placeholder="Title">
                 </p>
                 <p>
                     <label>
                         Text:
                         <!-- <input type="text" placeholder="Text"> -->
                     </label>
-                </p>
-                <p>
-                    <textarea name="text" placeholder="Text">
-                    </textarea>
+                    <br />
+                    <textarea name="text" placeholder="Text"></textarea>
                 </p>
                 <p>
                     <button type="submit">Publikovat</button>

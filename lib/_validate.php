@@ -83,7 +83,8 @@ function validateLName($lname)
             // return 's';
     }
 }
-// TODO VALIDATE ERRORS
+
+//TODO testing on password
 function validatePassword($password1, $password2)
 {
     global $errors;

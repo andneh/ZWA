@@ -7,22 +7,7 @@ if (isset($_POST['login'])) {
     header('Location: login.php');
 }
 
-
-
-
-
-
-
-
-//TODO testing on password
-// TODO testing login
-// TODO add user
-// TODO auto login
-// TODO input normalization
-
-
 if (isset($_POST['registration'])) {
-
 
     $username = strtolower(str_replace(' ', '', $_POST['username']));
     $fname = ucfirst(strtolower(str_replace(' ', '', $_POST['fname'])));
@@ -31,9 +16,6 @@ if (isset($_POST['registration'])) {
     $password2 = $_POST['password2'];
     $birthday = $_POST['birthday'];
     $email = strtolower(str_replace(' ', '', $_POST['email']));
-
-
-
 
     switch (true) {
         case $error = validateUserName($username):
@@ -97,51 +79,51 @@ include "components/_head.php";
                 <p>
                     <label>
                         Jméno uživatele:
-                        <br />
-                        <input type="text" minlength="4" maxlength="20" required value="<?= isset($username) ? $username : '' ?>" name="username">
                     </label>
+                    <br />
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($username) ? $username : '' ?>" name="username">
                 </p>
                 <p>
                     <label>
                         Jméno:
-                        <br />
-                        <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>" name="fname">
                     </label>
+                    <br />
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>" name="fname">
                 </p>
                 <p>
                     <label>
                         Příjmení:
-                        <br />
-                        <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>" name="lname">
                     </label>
+                    <br />
+                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>" name="lname">
                 </p>
                 <p>
                     <label>
                         Datum narození:
-                        <br />
-                        <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday">
                     </label>
+                    <br />
+                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday">
                 </p>
                 <p>
                     <label>
                         E-mail:
-                        <br />
-                        <input type="email" value="<?= isset($email) ? $email : '' ?>" name="email">
                     </label>
+                    <br />
+                    <input type="email" value="<?= isset($email) ? $email : '' ?>" name="email">
                 </p>
                 <p>
                     <label>
                         Heslo:
-                        <br />
-                        <input type="password" minlength="8" required name="password1">
                     </label>
+                    <br />
+                    <input type="password" minlength="8" required name="password1">
                 </p>
                 <p>
                     <label>
                         Zopakujte heslo:
-                        <br />
-                        <input type="password" minlength="8" required name="password2">
                     </label>
+                    <br />
+                    <input type="password" minlength="8" required name="password2">
                 </p>
                 <p>
                     <button type="submit" name="registration" value="1">Registrace</button>
