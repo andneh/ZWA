@@ -1,5 +1,7 @@
 :root {
-    --background: #1d1d1c;
-    --text: #e4eae0;
     --line: #000000;
+    --background: #1d1d1d;
+    --form: #2c2c2c;
+    --button: #303030;
+    --text: #e6e6e6;
 }

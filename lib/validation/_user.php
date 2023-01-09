@@ -79,7 +79,6 @@ function validateLName($value)
     }
 }
 
-//TODO testing on password
 function validatePassword($value, $password2)
 {
     // function to validate password

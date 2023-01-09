@@ -7,6 +7,8 @@
     header {
         display: flex;
         border-block-end: var(--line) 1px solid;
+        block-size: 10vh;
+        background-color: var(--form);
     }
 
     img.logo {
@@ -39,6 +41,7 @@
     }
     main {
         margin-inline: auto;
+        min-block-size: 90vh;
     }
 
     /* article, */
@@ -47,6 +50,7 @@
         /* padding-inline: 2em; */
         padding: 0px;
         margin: 1rem;
+        background-color: var(--form);
     }
 
     .info {
@@ -68,6 +72,13 @@
         block-size: 5rem;
         resize: none;
     }
+    input,
+    textarea {
+        border: 1px solid var(--line);
+        color: var(--text);
+        background-color: var(--background);
+        /* inline-size: 100%; */
+    }
     .error {
         color: red;
     }
@@ -75,17 +86,19 @@
         width: 100%;
         height: 3rem;
         border-block-start: 1px var(--line) solid;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
+        background-color: var(--form);
     }
     a {
         color: var(--text);
     }
-    /* button {
+    button {
         color: var(--text);
-        background-color: var(--background);
+        background-color: var(--button);
         border: 1px var(--line) solid;
-        box-shadow: none;
-    } */
+    }
+    legend {
+        border: 1px solid var(--line);
+        color: var(--text);
+        background-color: var(--form);
+    }
 }
