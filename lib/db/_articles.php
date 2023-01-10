@@ -3,15 +3,17 @@ function addArticle(
     $uid,
     $title,
     $text
-) {
+)
+{
     // Function to add new article right to DB
     // hashing the article TODO
     $hash = "hash";
     $data = loadDB();
     // adding article to the data array
     $aid = uniqid();
-    $data['articles'][$aid] = article($aid, $uid, $title, $text, $hash);
-    // array_push(, $aid => article($uid, $title, $text, $hash));
+    // $data['articles'][$aid] = article($aid, $uid, $title, $text, $hash);
+    $new = array($aid => article($aid, $uid, $title, $text, $hash));
+    $data['articles'] = array_merge($new, $data['articles']);
     saveDB($data);
 }
 

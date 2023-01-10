@@ -12,9 +12,10 @@
     }
 
     img.logo {
-        block-size: 100px;
-        inline-size: 100px;
-        /* margin-inline-end: auto; */
+        block-size: 8vh;
+        inline-size: auto;
+        margin-block: auto;
+        margin-inline: 2vw;
         border: none;
     }
 
@@ -25,16 +26,16 @@
 
     .nav {
         block-size: 50px;
-        inline-size: 50px;
+        inline-size: auto;
         margin: auto;
-        border: none;
 
         background-color: var(--black);
+        align-content: center;
         object-fit: fill;
     }
 
     svg {
-        margin: 0px;
+        margin-block: auto;
     }
     path {
         fill: var(--text);

@@ -61,7 +61,7 @@ include "components/_head.php";
 
         <form action="" id="login" method="post">
         </form>
-        <form action="" method="post">
+        <form action="" id="registration" method="post">
             <fieldset>
                 <legend>Registrace</legend>
                 <?php
