@@ -6,3 +6,9 @@
         inline-size: 100vw;
     }
 }
+@media only screen and (max-width: 900px) {
+    .label {
+        inline-size: 0px;
+        overflow: hidden;
+    }
+}

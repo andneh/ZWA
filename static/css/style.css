@@ -65,8 +65,11 @@
         margin-block: 0.5rem;
         margin-inline: 1rem;
     }
-    .spacer {
-        margin-inline: auto;
+
+    .label {
+        margin-inline: 2vw;
+        margin-inline-end: auto;
+        text-align: center;
     }
     textarea {
         inline-size: inherit;

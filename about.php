@@ -18,7 +18,11 @@ include "components/_head.php";
             </p>
         </noscript>
 
-        <p>© 2022 Andrii Nehalchuk </p>
+        <?php
+        require("components/_articlesWrapper.php");
+        require("lib/_db.php");
+        articlesWrapper(array(getArticleByAid("63bde26358d8f")), "like", "líbí se mi");
+        ?>
 
     </main>
 

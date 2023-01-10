@@ -93,14 +93,16 @@ include "components/_head.php";
                         Název:
                     </label>
                     <br>
-                    <input type="text" required minlength="4" maxlength="20" name="title" placeholder="Title">
+                    <input type="text" required minlength="4" maxlength="20" name="title"
+                        value="<?= isset($title) ? $title : '' ?>" placeholder="Uveďte název">
                 </p>
                 <p>
                     <label>
                         Text:
                     </label>
                     <br>
-                    <textarea name="text" required minlength="4" maxlength="500" placeholder="Text"></textarea>
+                    <textarea name="text" required minlength="4" maxlength="500"
+                        placeholder="Podělte se o své myšlenky..."><?= isset($text) ? $text : '' ?></textarea>
                 </p>
                 <p>
                     <button type="submit" name="article">Publikovat</button>

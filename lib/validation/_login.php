@@ -2,7 +2,8 @@
 function validateLogin(
     $username,
     $password
-) {
+)
+{
 
     $error = "Uživatelské jméno nebo heslo byly zadány nesprávně";
 

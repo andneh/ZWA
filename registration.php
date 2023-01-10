@@ -75,7 +75,7 @@ include "components/_head.php";
                     </label>
                     <br>
                     <input type="text" minlength="4" maxlength="20" required
-                        value="<?= isset($username) ? $username : '' ?>" name="username">
+                        value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                 </p>
                 <p>
                     <label>
@@ -83,7 +83,7 @@ include "components/_head.php";
                     </label>
                     <br>
                     <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>"
-                        name="fname">
+                        name="fname" placeholder="Jiří">
                 </p>
                 <p>
                     <label>
@@ -91,7 +91,7 @@ include "components/_head.php";
                     </label>
                     <br>
                     <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>"
-                        name="lname">
+                        name="lname" placeholder="Novák">
                 </p>
                 <p>
                     <label>
@@ -105,21 +105,22 @@ include "components/_head.php";
                         E-mail:
                     </label>
                     <br>
-                    <input type="email" value="<?= isset($email) ? $email : '' ?>" name="email">
+                    <input type="email" value="<?= isset($email) ? $email : '' ?>" name="email"
+                        placeholder="email@example.com">
                 </p>
                 <p>
                     <label>
                         Heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" required name="password1">
+                    <input type="password" minlength="8" required name="password1" placeholder="password">
                 </p>
                 <p>
                     <label>
                         Zopakujte heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" required name="password2">
+                    <input type="password" minlength="8" required name="password2" placeholder="password">
                 </p>
                 <p>
                     <button type="submit" name="registration" value="1">Registrace</button>

@@ -22,7 +22,7 @@ function validateTitle($value)
 
         case strlen($value) >= 4:
             // check min length
-            return $item . $errors["empty"];
+            return $item . $errors["short4"];
 
         case strlen($value) <= 20:
             // check max length
@@ -43,7 +43,7 @@ function validateText($value)
 
         case strlen($value) >= 4:
             // check min length
-            return $item . $errors["empty"];
+            return $item . $errors["short4"];
 
         case strlen($value) <= 500:
             // check max length

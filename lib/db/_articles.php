@@ -22,7 +22,7 @@ function getArticles()
     // function of get all article from the data array
     return loadDB()["articles"];
 }
-function getArticlesByAid($aid)
+function getArticleByAid($aid)
 {
     return getArticles()[$aid];
 }

@@ -1,1 +1,21 @@
-{"users":{"63ba2c9608544":{"uid":"63ba2c9608544","username":"root","fname":"Foo","lname":"Bar","hash":"$2y$10$ldflnWNLkwBM62k0NPG0A.\/QDh5IFxL3DCk5Ec0zbxC0zKsnQwQum"},"63ba2c961d8e8":{"uid":"63ba2c961d8e8","username":"andrew","fname":"Andrew","lname":"Nehalchuk","hash":"$2y$10$dxS3HqiNnUnJuDuIAuj4GeeJi1VNkEx2gCbORDWT\/BtbD4ZbAyHYC"}},"articles":{"63bc85b37e309":{"aid":"63bc85b37e309","uid":"63ba2c961d8e8","title":"Update","text":"eagij","date":"09.01.2023","hash":"a57b2616a8b681b7f184866dfb5dbf3b"},"63ba2c9608558":{"aid":"63ba2c9608558","uid":"63ba2c9608544","title":"Title","text":"Text content.","date":"08.01.2023","hash":"9a78030b6712b02a00d7652cf975bbd7"},"63baf7ec07a63":{"aid":"63baf7ec07a63","uid":"63ba2c961d8e8","title":"lifj3ogj;q3jgo4ig","text":"o3igrjw;ogow4jroigjwog","date":"08.01.2023","hash":"6d973f0d25760dd93fc1e7e1edf8fdfb"},"63baf7f6e129c":{"aid":"63baf7f6e129c","uid":"63ba2c961d8e8","title":"3fiqj3;goij3g","text":"q3goij;qr3ogq3 ","date":"08.01.2023","hash":"6d6d87a125c22d1f38536778ab8db060"}}}
+{
+    "users": {
+        "63bcb8a45cccb": {
+            "uid": "63bcb8a45cccb",
+            "username": "andrew",
+            "fname": "Andrii",
+            "lname": "Nehalchuk",
+            "hash": "$2y$10$eea7OdAjEQyq5myXLpCA2ewngG2y91G.BBYtCPp.CgTEoFt79UXsi"
+        }
+    },
+    "articles": {
+        "63bde26358d8f": {
+            "aid": "63bde26358d8f",
+            "uid": "63bcb8a45cccb",
+            "title": "O projektu",
+            "text": "Za vzd\u011bl\u00e1vac\u00edm projektem \"Nez\u00e1visl\u00e9 publikov\u00e1n\u00ed\" stoj\u00ed my\u0161lenka \u010dl\u00e1nku bez cenzury a beze zm\u011bn. V\u0161em\n                \u010dl\u00e1nk\u016fm je p\u0159i zve\u0159ejn\u011bn\u00ed p\u0159i\u0159azen jedine\u010dn\u00fd hash na z\u00e1klad\u011b n\u00e1zvu, textu, data a jedine\u010dn\u00e9ho \u010d\u00edsla\n                \u010dl\u00e1nku, tak\u017ee p\u0159i zm\u011bn\u011b \u010dl\u00e1nku nebo zm\u011bn\u011b textu se hash nebude shodovat s p\u016fvodn\u00edm. Pi\u0161te o tom, co\n                chcete vypr\u00e1v\u011bt, ale p\u0159em\u00fd\u0161lejte o tom. \ud83d\ude09",
+            "date": "10.01.2023",
+            "hash": "da37df8551c0856bca9bcb8a8ca82e68"
+        }
+    }
+}

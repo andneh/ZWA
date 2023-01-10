@@ -9,7 +9,16 @@ function addUser(
     // create and add new user to the database
     $data = loadDB();
     $uid = uniqid();
-    $data['users'][$uid] = user($uid, $username, $fname, $lname, $password);
+    $data['users'][$uid] = user(
+        $uid,
+        $username,
+        $fname,
+        $lname,
+        password_hash(
+            $username . $password . $uid,
+            PASSWORD_DEFAULT
+        )
+    );
     // array_push($data['users'], user($username, $fname, $lname, $password));
     saveDB($data);
 }

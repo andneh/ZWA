@@ -58,14 +58,14 @@ include "components/_head.php";
                     </label>
                     <br>
                     <input type="text" minlength="4" maxlength="20" required
-                        value="<?= isset($username) ? $username : '' ?>" name="username">
+                        value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                 </p>
                 <p>
                     <label>
                         Heslo:
                     </label>
                     <br>
-                    <input minlength="8" type="password" required name="password">
+                    <input minlength="8" type="password" required name="password" placeholder="password">
                 </p>
                 <p>
                     <button type="submit" name="login" value="1">Přihlásit se</button>

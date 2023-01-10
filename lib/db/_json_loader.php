@@ -18,11 +18,16 @@ function loadDB()
     $json = file_get_contents(DB);
     if ($json == NULL) {
         // check if database exist
-        $uid = uniqid();
-        $aid = uniqid();
+        $uid = "63bcb8a45cccb";
+        $aid = "63bde26358d8f";
         $data = array(
-            "users" => array($uid => user($uid, "root", "Foo", "Bar", "root")),
-            "articles" => array($aid => article($aid, $uid, "Title", "Text content."))
+            "users" => array($uid => user($uid, "andrew", "Andrii", "Nehalchuk", '$2y$10$eea7OdAjEQyq5myXLpCA2ewngG2y91G.BBYtCPp.CgTEoFt79UXsi')),
+            "articles" => array(
+                $aid => article($aid, $uid, "O projektu", "Za vzdělávacím projektem \"Nezávislé publikování\" stojí myšlenka článku bez cenzury a beze změn. Všem
+                článkům je při zveřejnění přiřazen jedinečný hash na základě názvu, textu, data a jedinečného čísla
+                článku, takže při změně článku nebo změně textu se hash nebude shodovat s původním. Pište o tom, co
+                chcete vyprávět, ale přemýšlejte o tom. 😉")
+            )
         );
         saveDB($data);
         return ($data);

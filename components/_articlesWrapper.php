@@ -11,7 +11,7 @@ function articlesWrapper($articles, $btnAct, $btnNm)
             <form action=\"\" method=\"post\">
                 <fieldset>
                     <legend>
-                    <abbr title=\"MD5 HASH #{$article["hash"]}\">{$article["date"]}</abbr>
+                    <abbr title=\"ID {$article["aid"]} MD5 HASH {$article["hash"]}\">{$article["date"]}</abbr>
                     {$autor["fname"]} {$autor["lname"]}
                     </legend>
                     <h2>
