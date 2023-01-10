@@ -75,7 +75,7 @@
         border: 1px solid var(--line);
         color: var(--text);
         background-color: var(--background);
-        /* inline-size: 100%; */
+        inline-size: 100%;
     }
     .error {
         color: red;

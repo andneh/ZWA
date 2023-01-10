@@ -5,4 +5,9 @@
     main {
         inline-size: 50vw;
     }
+    #registration,
+    #login {
+        inline-size: 25vw;
+        margin-inline: auto;
+    }
 }
