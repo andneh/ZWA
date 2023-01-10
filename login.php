@@ -37,7 +37,7 @@ include "components/_head.php";
 
     <main>
         <noscript>
-            <p>
+            <p class="error">
                 Please, turn on JavaScript.
             </p>
         </noscript>

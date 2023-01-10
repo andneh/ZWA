@@ -1,2 +1,3 @@
 // TODO login check
-"ds".toLowerCase        
+"ds".toLowerCase
+// on submit control all

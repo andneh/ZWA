@@ -31,7 +31,7 @@ if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
     if (isset($_POST["delete"])) {
         // delete article
         $aid = $_POST["delete"];
-        if ($user["uid"] == getArticlesByAid($aid)["uid"]) {
+        if ($user["uid"] == getArticleByAid($aid)["uid"]) {
             // check if owner delete article
             deleteArticle($aid);
             // delete
@@ -59,7 +59,7 @@ include "components/_head.php";
 
     <main>
         <noscript>
-            <p>
+            <p class="error">
                 Please, turn on JavaScript.
             </p>
         </noscript>

@@ -17,6 +17,11 @@ include "components/_head.php";
     ?>
 
     <main>
+        <noscript>
+            <p class="error">
+                Please, turn on JavaScript.
+            </p>
+        </noscript>
 
         <?php
         // TODO sorting and filtering

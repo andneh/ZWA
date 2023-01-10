@@ -1,1 +1,21 @@
-{"users":{"63bcb8a45cccb":{"uid":"63bcb8a45cccb","username":"andrew","fname":"Andrii","lname":"Nehalchuk","hash":"$2y$10$eea7OdAjEQyq5myXLpCA2ewngG2y91G.BBYtCPp.CgTEoFt79UXsi"},"63bde640d170f":{"uid":"63bde640d170f","username":"andreww","fname":"Qwejk","lname":"Wokefmwo","hash":"$2y$10$jL\/jfWOKjyT56QQzmffEhuYclRnJcO\/hTRVedVVLC.ZVnEH9qenLe"},"63bde6930fb4c":{"uid":"63bde6930fb4c","username":"12312313","fname":"12312312","lname":"12313212","hash":"$2y$10$JIyufQIZ2HxqbFmQDqVGhOyQMvXpxC2sh3Y0eLYT\/C95rHBxn9shm"}},"articles":{"63bde26358d8f":{"aid":"63bde26358d8f","uid":"63bcb8a45cccb","title":"O projektu","text":"Za vzd\u011bl\u00e1vac\u00edm projektem \"Nez\u00e1visl\u00e9 publikov\u00e1n\u00ed\" stoj\u00ed my\u0161lenka \u010dl\u00e1nku bez cenzury a beze zm\u011bn. V\u0161em\n                \u010dl\u00e1nk\u016fm je p\u0159i zve\u0159ejn\u011bn\u00ed p\u0159i\u0159azen jedine\u010dn\u00fd hash na z\u00e1klad\u011b n\u00e1zvu, textu, data a jedine\u010dn\u00e9ho \u010d\u00edsla\n                \u010dl\u00e1nku, tak\u017ee p\u0159i zm\u011bn\u011b \u010dl\u00e1nku nebo zm\u011bn\u011b textu se hash nebude shodovat s p\u016fvodn\u00edm. Pi\u0161te o tom, co\n                chcete vypr\u00e1v\u011bt, ale p\u0159em\u00fd\u0161lejte o tom. \ud83d\ude09","date":"10.01.2023","hash":"da37df8551c0856bca9bcb8a8ca82e68"}}}
+{
+    "users": {
+        "63bcb8a45cccb": {
+            "uid": "63bcb8a45cccb",
+            "username": "andrew",
+            "fname": "Andrii",
+            "lname": "Nehalchuk",
+            "hash": "$2y$10$eea7OdAjEQyq5myXLpCA2ewngG2y91G.BBYtCPp.CgTEoFt79UXsi"
+        }
+    },
+    "articles": {
+        "63bde26358d8f": {
+            "aid": "63bde26358d8f",
+            "uid": "63bcb8a45cccb",
+            "title": "O projektu",
+            "text": "Za vzd\u011bl\u00e1vac\u00edm projektem \"Nez\u00e1visl\u00e9 publikov\u00e1n\u00ed\" stoj\u00ed my\u0161lenka \u010dl\u00e1nku bez cenzury a beze zm\u011bn. V\u0161em\n                \u010dl\u00e1nk\u016fm je p\u0159i zve\u0159ejn\u011bn\u00ed p\u0159i\u0159azen jedine\u010dn\u00fd hash na z\u00e1klad\u011b n\u00e1zvu, textu, data a jedine\u010dn\u00e9ho \u010d\u00edsla\n                \u010dl\u00e1nku, tak\u017ee p\u0159i zm\u011bn\u011b \u010dl\u00e1nku nebo zm\u011bn\u011b textu se hash nebude shodovat s p\u016fvodn\u00edm. Pi\u0161te o tom, co\n                chcete vypr\u00e1v\u011bt, ale p\u0159em\u00fd\u0161lejte o tom. \ud83d\ude09",
+            "date": "10.01.2023",
+            "hash": "da37df8551c0856bca9bcb8a8ca82e68"
+        }
+    }
+}
