@@ -5,7 +5,7 @@ $errors = array(
     "uniq" => " již obsazeno, zkuste to znovu.",
     "short4" => " musí být delší než 4 znaky.",
     "short8" => " musí být delší než 8 znaky.",
-    "long" => " je příliš dlouhý",
+    "long" => " je příliš dlouhý.",
     "same" => " musí být stejné.",
 );
 
@@ -95,12 +95,16 @@ function validatePassword($value, $password2)
             // check min length
             return $item . $errors["short8"];
 
-        case preg_match("/[a-z]/i", $item):
+        case preg_match("/[a-z]/", $value):
             // check fi
-            return $item . " musí obsahovat písmena";
+            return $item . " musí obsahovat písmena.";
 
-        case preg_match('/[0-9]/', $item):
-            return $item . " musí obsahovat čísla";
+        case preg_match("/[A-Z]/", $value):
+            // check fi
+            return $item . " musí obsahovat velká písmena.";
+
+        case preg_match('/[0-9]/', $value):
+            return $item . " musí obsahovat čísla.";
 
         case $value == $password2:
             // check passwords same
