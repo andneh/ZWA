@@ -19,4 +19,4 @@ const articleValidation = () => {
             validationOk(password);
             return true;
     }
-}
+} 
