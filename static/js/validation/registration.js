@@ -15,9 +15,11 @@ const numbers = /0-9/;
 
 const validationError = (element, error) => {
     alert(error);
-
+    element.style.borderColor = "red";
 }
-
+const validationOk = (element, error) => {
+    element.style.borderColor = "var(--line)";
+}
 
 const usernameValidation = (element) => {
     const value = element.value;
@@ -37,6 +39,7 @@ const usernameValidation = (element) => {
             return false;
 
         default:
+            validationOk(element);
             return true;
     }
 }
@@ -62,6 +65,7 @@ const fnameValidation = (element) => {
 
 
         default:
+            validationOk(element);
             return true;
     }
 }
@@ -84,6 +88,7 @@ const lnameValidation = (element) => {
             return false;
 
         default:
+            validationOk(element);
             return true;
     }
 }
@@ -122,7 +127,7 @@ const passwordValidation = (element, password2) => {
             validationError(element, item + errors.short8);
             return false;
 
-        case lowerCase.test(value) || uperCase.test(value) || numbers.test(value):
+        case (lowerCase.test(value) || uperCase.test(value) || numbers.test(value)):
             validationError(element, item + " musí obsahovat velká písmena, písmena a čísla.");
             return false;
 
@@ -131,6 +136,7 @@ const passwordValidation = (element, password2) => {
             return false;
 
         default:
+            validationOk(element);
             return true;
     }
 }

@@ -44,7 +44,7 @@ include "components/_head.php";
 
         <form action="" id="registration" method="post">
         </form>
-        <form id="login" action="" method="post">
+        <form id="login" action="" method="post" onsubmit="return validateLogin()">
             <fieldset>
                 <legend>Autorizace</legend>
                 <?php
