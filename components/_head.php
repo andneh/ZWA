@@ -22,4 +22,7 @@
     <link rel="stylesheet" class="theme" href="./static/css/themes/light.css">
 
     <script src="./static/js/themeManager.js" defer></script>
+    <script src="./static/js/validation/article.js" defer></script>
+    <script src="./static/js/validation/registration.js" defer></script>
+    <script src="./static/js/validation/login.js" defer></script>
 </head>

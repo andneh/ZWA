@@ -1,7 +1,7 @@
 <?php
 
 require "lib/_db.php";
-require 'lib/validation/_user.php';
+require 'lib/validation/_registration.php';
 
 if (isset($_POST['login'])) {
     // login page
@@ -61,7 +61,7 @@ include "components/_head.php";
 
         <form action="" id="login" method="post">
         </form>
-        <form action="" id="registration" method="post">
+        <form action="" id="registration" method="post" onsubmit="return registrationValidation()">
             <fieldset>
                 <legend>Registrace</legend>
                 <?php
@@ -72,10 +72,10 @@ include "components/_head.php";
                 <p>
                     <label>
                         Jméno uživatele:
+                        <br>
+                        <input type="text" minlength="4" maxlength="20" required
+                            value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                     </label>
-                    <br>
-                    <input type="text" minlength="4" maxlength="20" required
-                        value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                 </p>
                 <p>
                     <label>
@@ -123,7 +123,7 @@ include "components/_head.php";
                     <input type="password" minlength="8" required name="password2" placeholder="password">
                 </p>
                 <p>
-                    <button type="submit" name="registration" value="1">Registrace</button>
+                    <button type="submit" name="" value="">Registrace</button>
                 </p>
                 <p>
                     <button form="login" type="submit" name="login" value="1">Přihlášení</button>
