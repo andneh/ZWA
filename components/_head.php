@@ -18,11 +18,15 @@
 
     <!-- <link rel="stylesheet" href="./static/css/dev.css"> -->
 
-
     <link rel="stylesheet" class="theme" href="./static/css/themes/light.css">
 
+    <!-- async libraries -->
+    <script src="./static/js/lib/validation/lib.js" async></script>
+    <script src="./static/js/lib/validation/article.js" async></script>
+    <script src="./static/js/lib/validation/registration.js" async></script>
+    <script src="./static/js/lib/validation/login.js" async></script>
+
+    <!-- defer code -->
+    <script src="./static/js/validation.js" defer></script>
     <script src="./static/js/themeManager.js" defer></script>
-    <script src="./static/js/validation/article.js" defer></script>
-    <script src="./static/js/validation/registration.js" defer></script>
-    <script src="./static/js/validation/login.js" defer></script>
 </head>

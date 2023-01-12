@@ -52,6 +52,7 @@ include "components/_head.php";
                     echo "<p class=\"error\">$error</p>";
                 }
                 ?>
+                <p class="error hidden"></p>
                 <p>
                     <label>
                         Jméno uživatele:

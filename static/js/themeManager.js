@@ -6,7 +6,6 @@ const theme = {
         localStorage.setItem(this.item, theme);
         document.querySelector("link.theme").href = "./static/css/themes/" + theme + ".css";
         document.querySelector("img.theme").src = "./static/imgs/logo/" + theme + ".png";
-
     },
 }
 
@@ -26,8 +25,6 @@ const toggleTheme = () => {
     }
 }
 
-
-
 {
     const cookies = localStorage.getItem(theme.item);
     switch (cookies) {
@@ -38,7 +35,6 @@ const toggleTheme = () => {
             theme.set(cookies);
     }
 }
-
 
 const themeButton = document.querySelector("a.nav.theme");
 themeButton.addEventListener("click", toggleTheme);

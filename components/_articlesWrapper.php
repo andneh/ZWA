@@ -2,8 +2,6 @@
 function articlesWrapper($articles, $btnAct, $btnNm)
 {
     echo "<div class=\"articleWrapper\">";
-
-    // TODO sort by date
     foreach ($articles as $article) {
         $user = getUserByUid($article["uid"]);
         $autor = $user["fname"] . " " . $user["lname"];
