@@ -1,17 +1,13 @@
 const loginValidation = (form) => {
-    const username = form.username;
-    const password = form.password;
-
     switch (false) {
-
-        case usernameValidation(username):
+        case usernameValidation(form.username):
             return false;
 
-        case password:
+        case form.password:
             validationError(password, "Heslo" + errors.empty);
             return false;
 
-        case password.length >= 8:
+        case form.password.length >= 8:
             validationError(password, "Heslo" + errors.short8);
             return false;
 

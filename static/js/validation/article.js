@@ -2,7 +2,6 @@ const titleValidation = (element) => {
     const value = element.value;
     const item = "Název";
 
-
     switch (false) {
         case value:
             validationError(element, item + errors.empty);
@@ -35,8 +34,8 @@ const textValidation = (element) => {
             validationError(element, item + errors.short4);
             return false;
 
-        case (value.length <= 20):
-            validationError(element, item + errors.long);
+        case (value.length <= 1000):
+            validationError(element, item + " velmi dlouhý.");
             return false;
 
         default:
@@ -46,21 +45,12 @@ const textValidation = (element) => {
 }
 
 const articleValidation = (form) => {
-    const title = form.title;
-    const text = form.text;
-
     switch (false) {
-
-        case password:
-            validationError(password, "Heslo" + errors.empty);
+        case titleValidation(form.title):
             return false;
-
-        case password.length >= 8:
-            validationError(password, "Heslo" + errors.short8);
+        case textValidation(form.text):
             return false;
-
         default:
-            validationOk(password);
             return true;
     }
 }
