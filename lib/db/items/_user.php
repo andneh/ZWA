@@ -10,9 +10,9 @@ function user(
     // Creating one user unit function with hash and real time data
     return array(
         "uid" => $uid,
-        "username" => strtolower($username),
-        "fname" => ucwords($fname),
-        "lname" => ucwords($lname),
+        "username" => htmlspecialchars(strtolower($username)),
+        "fname" => htmlspecialchars(ucwords($fname)),
+        "lname" => htmlspecialchars(ucwords($lname)),
         "hash" => $hash,
     );
 }

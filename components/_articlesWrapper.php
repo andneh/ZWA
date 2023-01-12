@@ -5,20 +5,23 @@ function articlesWrapper($articles, $btnAct, $btnNm)
 
     // TODO sort by date
     foreach ($articles as $article) {
-        $autor = getUserByUid($article["uid"]);
+        $user = getUserByUid($article["uid"]);
+        $autor = $user["fname"] . " " . $user["lname"];
+        $title = $article["title"];
+        $text = $article["text"];
         echo "
         <article>
             <form action=\"\" method=\"post\">
                 <fieldset>
                     <legend>
                     <abbr title=\"ID {$article["aid"]} MD5 HASH {$article["hash"]}\">{$article["date"]}</abbr>
-                    {$autor["fname"]} {$autor["lname"]}
+                    {$autor}
                     </legend>
                     <h2>
-                        {$article["title"]}
+                        {$title}
                     </h2>
                     <p>
-                        {$article["text"]}
+                        {$text}
                     </p>
                     <p>
                         <button type=\"submit\" name=\"{$btnAct}\" value=\"{$article["aid"]}\">{$btnNm}</button>

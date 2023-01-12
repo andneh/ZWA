@@ -41,4 +41,4 @@ const toggleTheme = () => {
 
 
 const themeButton = document.querySelector("a.nav.theme");
-themeButton.addEventListener("click", () => { toggleTheme(); });
+themeButton.addEventListener("click", toggleTheme);

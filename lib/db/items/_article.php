@@ -11,8 +11,8 @@ function article(
     return array(
         "aid" => $aid,
         "uid" => $uid,
-        "title" => $title,
-        "text" => $text,
+        "title" => htmlspecialchars($title),
+        "text" => htmlspecialchars($text),
         "date" => $date,
         "hash" => hash(
             "md5",

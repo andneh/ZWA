@@ -95,10 +95,9 @@ function validatePassword($value, $password2)
             // check min length
             return $item . $errors["short8"];
 
-        case preg_match("/[A-Z]/", $value) || preg_match('/[0-9]/', $value) || preg_match("/[a-z]/", $value):
+        case (preg_match('/[A-Z]/i', $value) or preg_match('/[a-z]/i', $value) or preg_match('/[0-9]/i', $value)):
             // check fi
             return $item . " musí obsahovat velká písmena, písmena a čísla.";
-
 
         case $value == $password2:
             // check passwords same

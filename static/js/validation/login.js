@@ -1,6 +1,6 @@
-const loginValidation = () => {
-    const username = document.forms.login.username;
-    const password = document.forms.login.password;
+const loginValidation = (form) => {
+    const username = form.username;
+    const password = form.password;
 
     switch (false) {
 
@@ -20,3 +20,6 @@ const loginValidation = () => {
             return true;
     }
 }
+
+const login = document.forms.login;
+login.addEventListener("submit", () => { loginValidation(login); });

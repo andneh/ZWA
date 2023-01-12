@@ -61,7 +61,7 @@ include "components/_head.php";
 
         <form action="" id="login" method="post">
         </form>
-        <form action="" id="registration" method="post" onsubmit="return registrationValidation()">
+        <form action="" id="registration" method="post">
             <fieldset>
                 <legend>Registrace</legend>
                 <?php
@@ -98,7 +98,8 @@ include "components/_head.php";
                         Datum narození:
                     </label>
                     <br>
-                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday">
+                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
+                        max="<?date('Y-m-d', strtotime('-18 year'))?>" required>
                 </p>
                 <p>
                     <label>

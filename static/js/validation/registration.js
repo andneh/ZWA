@@ -8,11 +8,6 @@ const errors = {
     "same": " musí být stejné.",
 }
 
-
-const lowerCase = /^[a-z]/;
-const uperCase = /^[A-Z]/;
-const numbers = /0-9/;
-
 const validationError = (element, error) => {
     alert(error);
     element.style.borderColor = "red";
@@ -44,7 +39,6 @@ const usernameValidation = (element) => {
     }
 }
 
-
 const fnameValidation = (element) => {
     const value = element.value;
     const item = "Jméno";
@@ -69,6 +63,7 @@ const fnameValidation = (element) => {
             return true;
     }
 }
+
 const lnameValidation = (element) => {
     const value = element.value;
     const item = "Příjmení";
@@ -92,21 +87,40 @@ const lnameValidation = (element) => {
             return true;
     }
 }
+
 const birthdayValidation = (element) => {
+    const item = "Datum";
+    const value = element.value ? new Date(element.value) : false;
+    let age = 0;
+    if (value) {
+        const ageDate = new Date(Date.now() - value.getTime());
+        age = (Math.abs(ageDate.getUTCFullYear() - 1970));
+    }
 
     switch (false) {
         case value:
-            validationError(item, errors.empty);
+            validationError(element, errors.empty);
+            return false;
+
+        case (age >= 18):
+            validationError(element, "18+");
             return false;
 
         default:
             return true;
     }
 }
+
 const emailValidation = (element) => {
+    const value = element.value;
+
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     switch (false) {
-        case value:
-            validationError(item, errors.empty);
+        case value != "":
+            return true;
+
+        case re.test(String(value).toLowerCase()):
+            validationError(element, "Zadali jste špatný e-mail.");
             return false;
 
         default:
@@ -117,6 +131,9 @@ const emailValidation = (element) => {
 const passwordValidation = (element, password2) => {
     const value = element.value;
     const item = "Heslo";
+    const upper = /[A-Z]+/i;
+    const lower = /[a-z]+/i;
+    const numbers = /[0-9]+/i;
 
     switch (false) {
         case value:
@@ -127,7 +144,7 @@ const passwordValidation = (element, password2) => {
             validationError(element, item + errors.short8);
             return false;
 
-        case (lowerCase.test(value) || uperCase.test(value) || numbers.test(value)):
+        case upper.test(value) && lower.test(value) && numbers.test(value):
             validationError(element, item + " musí obsahovat velká písmena, písmena a čísla.");
             return false;
 
@@ -141,30 +158,24 @@ const passwordValidation = (element, password2) => {
     }
 }
 
-
-const registrationValidation = () => {
-    const username = document.forms.registration.username;
-    const fname = document.forms.registration.fname;
-    const lname = document.forms.registration.lname;
-    const birthday = document.forms.registration.birthday;
-    const email = document.forms.registration.email;
-    const password1 = document.forms.registration.password1;
-    const password2 = document.forms.registration.password2;
-
+const registrationValidation = (form) => {
     switch (false) {
-        case usernameValidation(username):
+        case usernameValidation(form.username):
             return false;
-        case fnameValidation(fname):
+        case fnameValidation(form.fname):
             return false;
-        case lnameValidation(lname):
+        case lnameValidation(form.lname):
             return false;
-        // case birthdayValidation(birthday):
-        //     return false;
-        // case emailValidation(email):
-        //     return false;
-        case passwordValidation(password1, password2):
+        case birthdayValidation(form.birthday):
+            return false;
+        case emailValidation(form.email):
+            return false;
+        case passwordValidation(form.password1, form.password2):
             return false;
         default:
             return true;
     }
 }
+
+const registration = document.forms.registration;
+registration.addEventListener("submit", () => { registrationValidation(registration); });
