@@ -21,6 +21,7 @@ include "components/_head.php";
         <?php
         require("components/_articlesWrapper.php");
         require("lib/_db.php");
+        // get about project post by article id
         articlesWrapper(array(getArticleByAid("63bde26358d8f")), "like", "líbí se mi");
         ?>
 

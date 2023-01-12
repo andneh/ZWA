@@ -1,3 +1,4 @@
+// errors texts
 const errors = {
     "empty": " nesmí být prázdné.",
     "uniq": " již obsazeno, zkuste to znovu.",
@@ -7,6 +8,7 @@ const errors = {
     "same": " musí být stejné.",
 }
 
+// alert of error
 const validationError = (element, error) => {
     console.log(error);
     element.style.borderColor = "red";
@@ -14,15 +16,18 @@ const validationError = (element, error) => {
     errorLabel.style.display = "block";
 }
 
+// remove alert of error
 const validationOk = (element) => {
     element.style.borderColor = "var(--line)";
     errorLabel.style.display = "none";
     errorLabel.value = "";
 }
 
+// add event listener for form
 const formEventListener = (form, hander) => {
+    // check if form on page
     if (form) {
-        // form.addEventListener("onsubmit", () => { return hander(form); });
-        form.onsubmit = () => { return hander(form); };
+        form.addEventListener("submit", () => { return hander(form); });
+        // form.onsubmit = () => { return hander(form); };
     }
 }

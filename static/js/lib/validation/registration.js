@@ -2,6 +2,7 @@ const usernameValidation = (element) => {
     const value = element.value;
     const item = "Jméno uživatele";
     switch (false) {
+        // cases of validation of one element
         case value:
             validationError(element, item + errors.empty);
             return false;
@@ -21,6 +22,7 @@ const fnameValidation = (element) => {
     const value = element.value;
     const item = "Jméno";
     switch (false) {
+        // cases of validation of one element
         case value:
             validationError(element, item + errors.empty);
             return false;
@@ -40,6 +42,7 @@ const lnameValidation = (element) => {
     const value = element.value;
     const item = "Příjmení";
     switch (false) {
+        // cases of validation of one element
         case value:
             validationError(element, item + errors.empty);
             return false;
@@ -60,9 +63,11 @@ const birthdayValidation = (element) => {
     const value = element.value ? new Date(element.value) : false;
     let age = 0;
     if (value) {
+        // get age
         const ageDate = new Date(Date.now() - value.getTime());
         age = (Math.abs(ageDate.getUTCFullYear() - 1970));
     }
+    // cases of validation of one element
     switch (false) {
         case value:
             validationError(element, errors.empty);
@@ -78,6 +83,7 @@ const birthdayValidation = (element) => {
 const emailValidation = (element) => {
     const value = element.value;
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // cases of validation of one element
     switch (false) {
         case value != "":
             return true;
@@ -95,6 +101,7 @@ const passwordValidation = (element, password2) => {
     const upper = /[A-Z]+/i;
     const lower = /[a-z]+/i;
     const numbers = /[0-9]+/i;
+    // cases of validation of one element
     switch (false) {
         case value:
             validationError(element, item + errors.empty);
@@ -115,6 +122,7 @@ const passwordValidation = (element, password2) => {
 }
 
 const registrationValidation = (form) => {
+    // cases of validation of each input
     switch (false) {
         case usernameValidation(form.username):
             return false;

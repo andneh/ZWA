@@ -1,17 +1,17 @@
 <?php
 
 require "lib/_db.php";
-require 'lib/validation/_registration.php';
+require "lib/_validation.php";
 
+// login page
 if (isset($_POST['login'])) {
-    // login page
     header('Location: login.php');
 }
 
+// registration process
 if (isset($_POST['registration'])) {
-    // registration process
+    // validate normalized input
     $error = validateUser(
-        // validate normalized input
         $username = strtolower(str_replace(' ', '', $_POST['username'])),
         $fname = ucfirst(strtolower(str_replace(' ', '', $_POST['fname']))),
         $lname = ucfirst(strtolower(str_replace(' ', '', $_POST['lname']))),
@@ -21,19 +21,19 @@ if (isset($_POST['registration'])) {
     $birthday = $_POST['birthday'];
     $email = strtolower(str_replace(' ', '', $_POST['email']));
 
+    // check errors
     if ($error == false) {
-        // check errors
         addUser(
             $username,
             $fname,
             $lname,
             $password1
         );
-        $user = getUserByUsername($username);
         // create user
+        $user = getUserByUsername($username);
         session_start();
-        $_SESSION['uid'] = $user['uid'];
         // auto login
+        $_SESSION['uid'] = $user['uid'];
         header('Location: profile.php');
     }
 }

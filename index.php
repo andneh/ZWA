@@ -25,6 +25,7 @@ include "components/_head.php";
 
         <?php
         // TODO sorting and filtering
+        // get all articles from database and wrapping it
         articlesWrapper(getArticles(), "like", "líbí se mi");
         ?>
 

@@ -1,7 +1,9 @@
 <?php
+
 function validateLogin(
     $username,
-    $password
+    $password,
+    $user
 )
 {
 

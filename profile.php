@@ -1,44 +1,45 @@
 <?php
 require("components/_articlesWrapper.php");
 require "lib/_db.php";
-require "lib/validation/_article.php";
+require "lib/_validation.php";
 
+// logout
 if (isset($_POST['logout'])) {
-    // logout
     header('Location: logout.php');
 }
 
 session_start();
+// check user login
 if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
-    // check user login
     $user = getUserByUid($uid);
 
+    // new article
     if (isset($_POST["article"])) {
-        // new article
+        // validate article
         $error = validateArticle(
-            // validate article
             $title = preg_replace('!\s+!', ' ', $_POST["title"]),
             $text = preg_replace('!\s+!', ' ', $_POST["text"]),
         );
+        // check errors
         if ($error == false) {
-            // check errors
-            addArticle($user["uid"], $title, $text);
             // create article
+            addArticle($user["uid"], $title, $text);
             header('Location: profile.php');
         }
     }
 
+    // delete article
     if (isset($_POST["delete"])) {
-        // delete article
         $aid = $_POST["delete"];
+        // check if owner deletes the article
         if ($user["uid"] == getArticleByAid($aid)["uid"]) {
-            // check if owner delete article
-            deleteArticle($aid);
             // delete
+            deleteArticle($aid);
             header('Location: profile.php');
         }
     }
 } else {
+    // no login
     header('Location: login.php');
 }
 

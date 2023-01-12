@@ -1,6 +1,7 @@
 const titleValidation = (element) => {
     const value = element.value;
     const item = "Název";
+    // cases of validation one input
     switch (false) {
         case value:
             validationError(element, item + errors.empty);
@@ -20,6 +21,7 @@ const titleValidation = (element) => {
 const textValidation = (element) => {
     const value = element.value;
     const item = "Text";
+    // cases of validation one input
     switch (false) {
         case value:
             validationError(element, item + errors.empty);
@@ -37,6 +39,7 @@ const textValidation = (element) => {
 }
 
 const articleValidation = (form) => {
+    // cases of validation of each input
     switch (false) {
         case titleValidation(form.title):
             return false;

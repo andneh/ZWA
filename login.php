@@ -1,19 +1,20 @@
 <?php
 require "lib/_db.php";
-require "lib/validation/_login.php";
+require "lib/_validation.php";
 
+// registration button
 if (isset($_POST['registration'])) {
-    // registration button
     header('Location: registration.php');
 }
-if (isset($_POST['login'])) {
 
-    // login process
+// login process
+if (isset($_POST['login'])) {
     $error = validateLogin(
         $username = strtolower(str_replace(' ', '', $_POST['username'])),
         $_POST['password'],
     );
 
+    // check errors
     if ($error == false) {
         session_start();
         $_SESSION['uid'] = getUserByUsername($username)["uid"];

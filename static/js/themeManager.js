@@ -1,3 +1,4 @@
+// theme object 
 const theme = {
     item: "theme",
     light: "light",
@@ -9,7 +10,9 @@ const theme = {
     },
 }
 
+// toggle func of theme
 const toggleTheme = () => {
+    // cases for themes based on local storage
     switch (localStorage.getItem(theme.item)) {
         case null:
             theme.set(theme.light);
@@ -26,7 +29,9 @@ const toggleTheme = () => {
 }
 
 {
+    // get settings from cookies
     const cookies = localStorage.getItem(theme.item);
+    // load theme
     switch (cookies) {
         case null:
             theme.set(theme.light);
@@ -36,5 +41,5 @@ const toggleTheme = () => {
     }
 }
 
-const themeButton = document.querySelector("a.nav.theme");
-themeButton.addEventListener("click", toggleTheme);
+// add toggle to event listener
+document.querySelector("a.nav.theme").addEventListener("click", toggleTheme);

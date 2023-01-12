@@ -1,4 +1,5 @@
 const loginValidation = (form) => {
+    // cases of validation of each input
     switch (false) {
         case usernameValidation(form.username):
             return false;
