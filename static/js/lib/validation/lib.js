@@ -12,8 +12,9 @@ const errors = {
 const validationError = (element, error) => {
     console.log(error);
     element.style.borderColor = "red";
-    errorLabel.value = error;
+    errorLabel.textContent = error;
     errorLabel.style.display = "block";
+    element.focus();
 }
 
 // remove alert of error
@@ -27,7 +28,7 @@ const validationOk = (element) => {
 const formEventListener = (form, hander) => {
     // check if form on page
     if (form) {
-        form.addEventListener("submit", () => { return hander(form); });
-        // form.onsubmit = () => { return hander(form); };
+        // form.addEventListener("submit", () => { return hander(form); });
+        form.onsubmit = () => { return hander(form); };
     }
 }

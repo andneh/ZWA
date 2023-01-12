@@ -10,6 +10,7 @@ const loginValidation = (form) => {
             validationError(password, "Heslo" + errors.short8);
             return false;
         default:
+            console.log("ok");
             validationOk(password);
             return true;
     }

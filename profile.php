@@ -104,9 +104,7 @@ include "components/_head.php";
                     </label>
                     <br>
                     <textarea name="text" required minlength="4" maxlength="1000"
-                        placeholder="Podělte se o své myšlenky...">
-                        <?= isset($text) ? $text : '' ?>
-                    </textarea>
+                        placeholder="Podělte se o své myšlenky..."><?= isset($text) ? $text : '' ?></textarea>
                 </p>
                 <p>
                     <button type="submit" name="article">Publikovat</button>

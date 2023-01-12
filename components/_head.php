@@ -21,10 +21,10 @@
     <link rel="stylesheet" class="theme" href="./static/css/themes/light.css">
 
     <!-- async libraries -->
-    <script src="./static/js/lib/validation/lib.js" async></script>
-    <script src="./static/js/lib/validation/article.js" async></script>
-    <script src="./static/js/lib/validation/registration.js" async></script>
-    <script src="./static/js/lib/validation/login.js" async></script>
+    <script src="./static/js/lib/validation/lib.js"></script>
+    <script src="./static/js/lib/validation/article.js"></script>
+    <script src="./static/js/lib/validation/registration.js"></script>
+    <script src="./static/js/lib/validation/login.js"></script>
 
     <!-- defer code -->
     <script src="./static/js/validation.js" defer></script>

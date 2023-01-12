@@ -74,8 +74,8 @@ include "components/_head.php";
                     <label>
                         Jméno uživatele:
                         <br>
-                        <input type="text" minlength="4" maxlength="20" required
-                            value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
+                        <input type="text" minlength="4" maxlength="20" value="<?= isset($username) ? $username : '' ?>"
+                            name="username" placeholder="username" require>
                     </label>
                 </p>
                 <p>
@@ -83,16 +83,16 @@ include "components/_head.php";
                         Jméno:
                     </label>
                     <br>
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($fname) ? $fname : '' ?>"
-                        name="fname" placeholder="Jiří">
+                    <input type="text" minlength="4" maxlength="20" value="<?= isset($fname) ? $fname : '' ?>"
+                        name="fname" placeholder="Jiří" require>
                 </p>
                 <p>
                     <label>
                         Příjmení:
                     </label>
                     <br>
-                    <input type="text" minlength="4" maxlength="20" required value="<?= isset($lname) ? $lname : '' ?>"
-                        name="lname" placeholder="Novák">
+                    <input type="text" minlength="4" maxlength="20" value="<?= isset($lname) ? $lname : '' ?>"
+                        name="lname" placeholder="Novák" require>
                 </p>
                 <p>
                     <label>
@@ -100,7 +100,7 @@ include "components/_head.php";
                     </label>
                     <br>
                     <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
-                        max="<?date('Y-m-d', strtotime('-18 year'))?>" required>
+                        max="<?date('Y-m-d', strtotime('-18 year'))?>" require>
                 </p>
                 <p>
                     <label>
@@ -115,20 +115,20 @@ include "components/_head.php";
                         Heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" required name="password1" placeholder="password">
+                    <input type="password" minlength="8" name="password1" placeholder="password" require>
                 </p>
                 <p>
                     <label>
                         Zopakujte heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" required name="password2" placeholder="password">
+                    <input type="password" minlength="8" name="password2" placeholder="password" require>
                 </p>
                 <p>
-                    <button type="submit" name="" value="">Registrace</button>
+                    <button type="submit" name="registration" value="">Registrace</button>
                 </p>
                 <p>
-                    <button form="login" type="submit" name="login" value="1">Přihlášení</button>
+                    <button form="login" type="submit" name="login" value="">Přihlášení</button>
                 </p>
             </fieldset>
         </form>

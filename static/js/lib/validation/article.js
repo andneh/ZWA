@@ -46,6 +46,7 @@ const articleValidation = (form) => {
         case textValidation(form.text):
             return false;
         default:
+            console.log("ok");
             return true;
     }
 }

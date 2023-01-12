@@ -70,7 +70,7 @@ const birthdayValidation = (element) => {
     // cases of validation of one element
     switch (false) {
         case value:
-            validationError(element, errors.empty);
+            validationError(element, item + errors.empty);
             return false;
         case (age >= 18):
             validationError(element, "18+");
@@ -137,6 +137,7 @@ const registrationValidation = (form) => {
         case passwordValidation(form.password1, form.password2):
             return false;
         default:
+            console.log("ok");
             return true;
     }
 }
