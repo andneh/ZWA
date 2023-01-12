@@ -11,7 +11,7 @@ if (isset($_POST['registration'])) {
 if (isset($_POST['login'])) {
     $error = validateLogin(
         $username = strtolower(str_replace(' ', '', $_POST['username'])),
-        $_POST['password'],
+        $_POST['password']
     );
 
     // check errors
