@@ -1,6 +1,8 @@
 <div class="articleWrapper">
 
-    <form action="" method="post"></form>
+    <form action="" method="post">
+
+    </form>
 
     <?php
     // TODO FILTERS by date by time by $sort
