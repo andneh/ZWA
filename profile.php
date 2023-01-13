@@ -1,6 +1,4 @@
 <?php
-require "lib/_db.php";
-require "lib/_validation.php";
 
 // logout
 if (isset($_POST['logout'])) {
@@ -10,6 +8,10 @@ if (isset($_POST['logout'])) {
 session_start();
 // check user login
 if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
+
+    require "lib/_db.php";
+    require "lib/_validation.php";
+
     $user = getUserByUid($uid);
 
     // new article
@@ -118,8 +120,11 @@ include "components/_head.php";
         $btnNm = "líbí se mi";
         $sorting = "Smazat";
         // get all articles from database and wrapping it
-        include("components/_articlesWrapper.php");
         ?>
+        <?php
+        include "components/_articlesWrapper.php";
+        ?>
+
 
     </main>
 
