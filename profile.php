@@ -113,8 +113,15 @@ include "components/_head.php";
         </form>
 
         <?php
-        articlesWrapper(getArticlesByUid($user["uid"]), "delete", "Smazat");
+        // TODO function post parameters of sorting
+        $articles = getArticlesByUid($user["uid"]);
+        $btnAct = "delete";
+        $btnNm = "líbí se mi";
+        $sorting = "Smazat";
+        // get all articles from database and wrapping it
+        include("components/_articlesWrapper.php");
         ?>
+
     </main>
 
     <?php

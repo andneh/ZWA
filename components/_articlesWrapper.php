@@ -1,10 +1,10 @@
-<?php
-function articlesWrapper($articles, $btnAct, $btnNm)
-{
-    // TODO FILTERS by date by time
+<div class="articleWrapper">
 
+    <form action="" method="post"></form>
 
-    echo "<div class=\"articleWrapper\">";
+    <?php
+    // TODO FILTERS by date by time by $sort
+    
     foreach ($articles as $article) {
         $user = getUserByUid($article["uid"]);
         $autor = $user["fname"] . " " . $user["lname"];
@@ -32,6 +32,7 @@ function articlesWrapper($articles, $btnAct, $btnNm)
         </article>
         ";
     }
+
     // TODO PAGINATION
-    echo "</div>";
-}
+    ?>
+</div>

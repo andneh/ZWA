@@ -1,7 +1,5 @@
 <?php
 require("lib/_db.php");
-require("components/_articlesWrapper.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +22,13 @@ include "components/_head.php";
         </noscript>
 
         <?php
+        // TODO function post parameters of sorting
+        $articles = getArticles();
+        $btnAct = "like";
+        $btnNm = "líbí se mi";
+        $sorting = "";
         // get all articles from database and wrapping it
-        articlesWrapper(getArticles(), "like", "líbí se mi");
+        include("components/_articlesWrapper.php");
         ?>
 
     </main>
