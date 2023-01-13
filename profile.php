@@ -1,5 +1,4 @@
 <?php
-require("components/_articlesWrapper.php");
 require "lib/_db.php";
 require "lib/_validation.php";
 

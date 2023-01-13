@@ -2,7 +2,7 @@
 
 function validateLogin(
     $username,
-    $password,
+    $password
 )
 {
 
