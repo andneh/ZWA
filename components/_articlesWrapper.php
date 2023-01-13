@@ -1,7 +1,9 @@
 <?php
 function articlesWrapper($articles, $btnAct, $btnNm)
 {
-    // TODO FILTERS
+    // TODO FILTERS by date by time
+
+
     echo "<div class=\"articleWrapper\">";
     foreach ($articles as $article) {
         $user = getUserByUid($article["uid"]);
