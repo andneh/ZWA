@@ -1,6 +1,7 @@
 <?php
 function articlesWrapper($articles, $btnAct, $btnNm)
 {
+    // TODO FILTERS
     echo "<div class=\"articleWrapper\">";
     foreach ($articles as $article) {
         $user = getUserByUid($article["uid"]);
@@ -29,5 +30,6 @@ function articlesWrapper($articles, $btnAct, $btnNm)
         </article>
         ";
     }
+    // TODO PAGINATION
     echo "</div>";
 }

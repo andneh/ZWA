@@ -10,6 +10,9 @@ if (isset($_POST['login'])) {
 
 // registration process
 if (isset($_POST['registration'])) {
+    $birthday = $_POST['birthday'];
+    $email = strtolower(str_replace(' ', '', $_POST['email']));
+
     // validate normalized input
     $error = validateUser(
         $username = strtolower(str_replace(' ', '', $_POST['username'])),
@@ -18,8 +21,7 @@ if (isset($_POST['registration'])) {
         $password1 = $_POST['password1'],
         $password2 = $_POST['password2'],
     );
-    $birthday = $_POST['birthday'];
-    $email = strtolower(str_replace(' ', '', $_POST['email']));
+
 
     // check errors
     if ($error == false) {
