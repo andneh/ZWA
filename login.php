@@ -28,12 +28,12 @@ if (isset($_POST['login'])) {
 <html lang="cs">
 
 <?php
-include "components/_head.php";
+require "components/_head.php";
 ?>
 
 <body class="root">
     <?php
-    include "components/_header.php";
+    require "components/_header.php";
     ?>
 
     <main>

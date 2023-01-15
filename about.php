@@ -2,13 +2,13 @@
 <html lang="cs">
 
 <?php
-include "components/_head.php";
+require "components/_head.php";
 ?>
 
 <body class="root">
 
     <?php
-    include "components/_header.php";
+    require "components/_header.php";
     ?>
 
     <main>
@@ -19,10 +19,13 @@ include "components/_head.php";
         </noscript>
 
         <?php
+        // TODO function post parameters of sorting
+        require('lib/_db.php');
+        $articles = array(getArticleByAid("63bde26358d8f"));
+        $btnAct = "like";
+        $btnNm = "líbí se mi";
+        // get all articles from database and wrapping it
         require("components/_articlesWrapper.php");
-        require("lib/_db.php");
-        // get about project post by article id
-        articlesWrapper(array(getArticleByAid("63bde26358d8f")), "like", "líbí se mi");
         ?>
 
     </main>

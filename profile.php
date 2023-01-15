@@ -50,13 +50,13 @@ if ($uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : NULL) {
 <html lang="cs">
 
 <?php
-include "components/_head.php";
+require "components/_head.php";
 ?>
 
 <body class="root">
 
     <?php
-    include "components/_header.php";
+    require "components/_header.php";
     ?>
 
     <main>
@@ -121,7 +121,7 @@ include "components/_head.php";
         // get all articles from database and wrapping it
         ?>
         <?php
-        include "components/_articlesWrapper.php";
+        require "components/_articlesWrapper.php";
         ?>
 
 
