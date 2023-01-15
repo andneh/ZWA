@@ -1,16 +1,48 @@
 <div class="articleWrapper">
 
-    <!-- <form action="" method="post">
 
-    </form> -->
+    <form action="" method="post" class="filter">
+        <p>
+
+            <label for="cars">Třídit podle:</label>
+
+            <select name="filter">
+                <option value="date">Datumu</option>
+                <option value="title">Názvu</option>
+                <option value="author">Autora</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="filter" name="search">
+        </p>
+    </form>
+
 
     <?php
-    // TODO FILTERS by date by time by $sort
+    require("lib/_sortArticles.php");
     // $articles;
     // $btnAct;
     // $btnNm;
     
     if (isset($articles)) {
+        echo "filer";
+        if (isset($_POST['filter'])) {
+            echo $_POST['filter'];
+            switch ($_POST['filter']) {
+                case "date":
+                    echo "date";
+                    usort($articles, "sortArticlesByDate");
+                    break;
+                case "title":
+                    echo "title";
+                    usort($articles, "sortArticlesByTitle");
+                    break;
+                case "author":
+                    echo "author";
+                    usort($articles, "sortArticlesByUid");
+                    break;
+            }
+        }
         foreach ($articles as $article) {
             $user = getUserByUid($article["uid"]);
             $autor = $user["fname"] . " " . $user["lname"];
