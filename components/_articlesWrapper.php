@@ -3,7 +3,7 @@
     <form action="" method="post" id="pages" class="filter">
         <?php
         // check if filter is set
-        if (isset($_POST['filter'])) {
+        if (isset($articles) and isset($_POST['filter'])) {
             require("lib/_sortArticles.php");
             switch ($_POST['filter']) {
                 case "date":
