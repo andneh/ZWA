@@ -68,7 +68,7 @@
             case ($numOfArticles < ($key_number + 10)):
                 $page_keys = array_slice($articles_keys, $key_number);
                 break;
-            case ($numOfArticles > ($key_number + 10)):
+            case ($numOfArticles >= ($key_number + 10)):
                 $page_keys = array_slice($articles_keys, $key_number, 10);
                 break;
         }
