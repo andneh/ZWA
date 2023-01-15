@@ -2,7 +2,7 @@
 
 function sortArticlesByDate($a, $b)
 {
-    return (strtotime($a["date"]) - strtotime($b["date"]) * -1);
+    return (strtotime($a["date"]) - strtotime($b["date"]));
 }
 
 function sortArticlesByTitle($a, $b)
