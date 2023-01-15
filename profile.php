@@ -114,11 +114,10 @@ include "components/_head.php";
         </form>
 
         <?php
-        // TODO function post parameters of sorting
         $articles = getArticlesByUid($user["uid"]);
         $btnAct = "delete";
-        $btnNm = "líbí se mi";
-        $sorting = "Smazat";
+        $btnNm = "Smazat";
+
         // get all articles from database and wrapping it
         ?>
         <?php
