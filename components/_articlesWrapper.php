@@ -2,21 +2,24 @@
 
     <form action="" method="post" id="pages" class="filter">
         <?php
-        // check if filter is set
-        if (isset($articles) and isset($_POST['filter'])) {
+        if (isset($articles)) {
+            // check if filter is set
+            if (isset($_POST['filter'])) {
+                $filter = $_POST['filter'];
+            } else {
+                $filter = "date";
+            }
+
             require("lib/_sortArticles.php");
-            switch ($_POST['filter']) {
+            switch ($filter) {
                 case "date":
                     usort($articles, "sortArticlesByDate");
-                    $dateFilter = true;
                     break;
                 case "title":
                     usort($articles, "sortArticlesByTitle");
-                    $titleFilter = true;
                     break;
                 case "author":
                     usort($articles, "sortArticlesByUid");
-                    $authorFilter = true;
                     break;
             }
         }
@@ -28,9 +31,9 @@
             <p>
                 <label for="cars">Třídit podle:</label>
                 <select name="filter">
-                    <option value="date" <?php echo (isset($dateFilter) ? "selected" : ''); ?>>datumu</option>
-                    <option value="title" <?php echo (isset($titleFilter) ? "selected" : ''); ?>>názvu</option>
-                    <option value="author" <?php echo (isset($authorFilter) ? "selected" : ''); ?>>autora</option>
+                    <option value="date" <?php echo ($filter == "date" ? "selected" : ''); ?>>datumu</option>
+                    <option value="title" <?php echo ($filter == "title" ? "selected" : ''); ?>>názvu</option>
+                    <option value="author" <?php echo ($filter == "author" ? "selected" : ''); ?>>autora</option>
                 </select>
             </p>
             <p>
