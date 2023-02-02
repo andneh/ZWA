@@ -89,7 +89,7 @@
             $title = $article["title"];
             $text = $article["text"];
             echo "<article>";
-            echo "<form action=\"\" method=\"post\">";
+            echo "<form action=\"/\" method=\"post\">";
             echo "<fieldset>";
             echo "<legend><abbr title=\"ID {$article["aid"]} MD5 HASH {$article["hash"]}\">{$article["date"]}</abbr> {$autor}</legend>";
             echo "<h2>{$title}</h2>";
