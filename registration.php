@@ -76,8 +76,8 @@ require "components/_head.php";
                     <label>
                         Jméno uživatele:
                         <br>
-                        <input type="text" minlength="4" maxlength="20" value="<?= isset($username) ? $username : '' ?>"
-                            name="username" placeholder="username" require>
+                        <input require type="text" minlength="4" maxlength="20"
+                            value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                     </label>
                 </p>
                 <p>
@@ -85,27 +85,27 @@ require "components/_head.php";
                         Jméno:
                     </label>
                     <br>
-                    <input type="text" minlength="4" maxlength="20" value="<?= isset($fname) ? $fname : '' ?>"
-                        name="fname" placeholder="Jiří" require>
+                    <input require type="text" minlength="4" maxlength="20" value="<?= isset($fname) ? $fname : '' ?>"
+                        name="fname" placeholder="Jiří">
                 </p>
                 <p>
                     <label>
                         Příjmení:
                     </label>
                     <br>
-                    <input type="text" minlength="4" maxlength="20" value="<?= isset($lname) ? $lname : '' ?>"
-                        name="lname" placeholder="Novák" require>
+                    <input require type="text" minlength="4" maxlength="20" value="<?= isset($lname) ? $lname : '' ?>"
+                        name="lname" placeholder="Novák">
                 </p>
                 <p>
                     <label>
                         Datum narození:
                     </label>
                     <br>
-                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday" max="
+                    <input require type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday" max="
                         <?php
                         echo date('Y-m-d', strtotime('-18 year'));
                         ?>
-                        " require>
+                        ">
                 </p>
                 <p>
                     <label>
@@ -120,14 +120,14 @@ require "components/_head.php";
                         Heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" name="password1" placeholder="password" require>
+                    <input require type="password" minlength="8" name="password1" placeholder="password">
                 </p>
                 <p>
                     <label>
                         Zopakujte heslo:
                     </label>
                     <br>
-                    <input type="password" minlength="8" name="password2" placeholder="password" require>
+                    <input require type="password" minlength="8" name="password2" placeholder="password">
                 </p>
                 <p>
                     <button type="submit" name="registration" value="">Registrace</button>
