@@ -61,9 +61,9 @@ require "components/_head.php";
             </p>
         </noscript>
 
-        <form action="" id="login" method="post">
+        <form action="registration.php" id="login" method="post">
         </form>
-        <form action="" id="registration" method="post">
+        <form action="registration.php" id="registration" method="post">
             <fieldset>
                 <legend>Registrace</legend>
                 <?php
@@ -101,8 +101,11 @@ require "components/_head.php";
                         Datum narození:
                     </label>
                     <br>
-                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
-                        max="<?date('Y-m-d', strtotime('-18 year'))?>" require>
+                    <input type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday" max="
+                        <?php
+                        echo date('Y-m-d', strtotime('-18 year'));
+                        ?>
+                        " require>
                 </p>
                 <p>
                     <label>

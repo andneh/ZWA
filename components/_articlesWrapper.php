@@ -1,6 +1,6 @@
 <div class="articleWrapper">
 
-    <form action="" method="post" id="pages" class="filter">
+    <form action="/" method="post" id="pages" class="filter">
         <?php
         if (isset($articles)) {
             // check if filter is set
@@ -24,12 +24,12 @@
             }
         }
         ?>
-        <fieldset class="">
+        <fieldset>
             <legend>
                 Filtr
             </legend>
             <p>
-                <label for="cars">Třídit podle:</label>
+                <label>Třídit podle:</label>
                 <select name="filter">
                     <option value="date" <?php echo ($filter == "date" ? "selected" : ''); ?>>datumu</option>
                     <option value="title" <?php echo ($filter == "title" ? "selected" : ''); ?>>názvu</option>
@@ -114,7 +114,8 @@
 
 <fieldset>
     <legend>
-        Page <?php echo "$page / $pages"; ?>
+        Page
+        <?php echo "$page / $pages"; ?>
     </legend>
     <div class="paginationWrapper">
         <div class="pagination">

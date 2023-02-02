@@ -43,9 +43,9 @@ require "components/_head.php";
             </p>
         </noscript>
 
-        <form action="" id="registration" method="post">
+        <form action="login.php" id="registration" method="post">
         </form>
-        <form id="login" action="" method="post">
+        <form id="login" action="login.php" method="post">
             <fieldset>
                 <legend>Autorizace</legend>
                 <?php

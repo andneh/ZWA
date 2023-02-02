@@ -67,7 +67,7 @@ require "components/_head.php";
         </noscript>
 
 
-        <form action="" method="post">
+        <form action="profile.php" method="post">
             <fieldset>
                 <legend>Profil</legend>
                 <h1>
@@ -82,7 +82,7 @@ require "components/_head.php";
         </form>
 
 
-        <form class="newArticle" action="" method="post">
+        <form class="newArticle" action="profile.php" method="post">
             <fieldset>
                 <legend>Nový článek</legend>
                 <?php
