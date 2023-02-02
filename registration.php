@@ -101,11 +101,8 @@ require "components/_head.php";
                         Datum narození:
                     </label>
                     <br>
-                    <input require type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday" max="
-                        <?php
-                        echo date('Y-m-d', strtotime('-18 year'));
-                        ?>
-                        ">
+                    <input require type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
+                        max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>">
                 </p>
                 <p>
                     <label>
