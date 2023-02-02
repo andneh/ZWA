@@ -76,7 +76,7 @@ require "components/_head.php";
                     <label>
                         Jméno uživatele:
                         <br>
-                        <input require type="text" minlength="4" maxlength="20"
+                        <input required type="text" minlength="4" maxlength="20"
                             value="<?= isset($username) ? $username : '' ?>" name="username" placeholder="username">
                     </label>
                 </p>
@@ -85,7 +85,7 @@ require "components/_head.php";
                         Jméno:
                     </label>
                     <br>
-                    <input require type="text" minlength="4" maxlength="20" value="<?= isset($fname) ? $fname : '' ?>"
+                    <input required type="text" minlength="4" maxlength="20" value="<?= isset($fname) ? $fname : '' ?>"
                         name="fname" placeholder="Jiří">
                 </p>
                 <p>
@@ -93,7 +93,7 @@ require "components/_head.php";
                         Příjmení:
                     </label>
                     <br>
-                    <input require type="text" minlength="4" maxlength="20" value="<?= isset($lname) ? $lname : '' ?>"
+                    <input required type="text" minlength="4" maxlength="20" value="<?= isset($lname) ? $lname : '' ?>"
                         name="lname" placeholder="Novák">
                 </p>
                 <p>
@@ -101,7 +101,7 @@ require "components/_head.php";
                         Datum narození:
                     </label>
                     <br>
-                    <input require type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
+                    <input required type="date" value="<?= isset($birthday) ? $birthday : '' ?>" name="birthday"
                         max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>">
                 </p>
                 <p>
@@ -117,14 +117,14 @@ require "components/_head.php";
                         Heslo:
                     </label>
                     <br>
-                    <input require type="password" minlength="8" name="password1" placeholder="password">
+                    <input required type="password" minlength="8" name="password1" placeholder="password">
                 </p>
                 <p>
                     <label>
                         Zopakujte heslo:
                     </label>
                     <br>
-                    <input require type="password" minlength="8" name="password2" placeholder="password">
+                    <input required type="password" minlength="8" name="password2" placeholder="password">
                 </p>
                 <p>
                     <button type="submit" name="registration" value="">Registrace</button>
